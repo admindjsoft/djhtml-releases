@@ -2327,11 +2327,11 @@ body {
       <div class="download-meta">
         <div class="download-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-          v1.0.0
+          <span id="dl-version">Loading...</span>
         </div>
         <div class="download-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg>
-          85 MB
+          <span id="dl-size">Loading...</span>
         </div>
         <div class="download-meta-item">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
@@ -2520,6 +2520,25 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     }
   });
 });
+
+// Fetch latest release info from GitHub
+fetch('https://api.github.com/repos/admindjsoft/djhtml-releases/releases/latest')
+  .then(r => r.json())
+  .then(data => {
+    const verEl = document.getElementById('dl-version');
+    const sizeEl = document.getElementById('dl-size');
+    if (verEl) verEl.textContent = data.tag_name || data.name || 'v1.0';
+    if (data.assets && data.assets.length > 0) {
+      const exe = data.assets.find(a => a.name.endsWith('.exe')) || data.assets[0];
+      if (sizeEl) sizeEl.textContent = (exe.size / (1024 * 1024)).toFixed(0) + ' MB';
+    }
+  })
+  .catch(() => {
+    const verEl = document.getElementById('dl-version');
+    const sizeEl = document.getElementById('dl-size');
+    if (verEl) verEl.textContent = 'v1.0';
+    if (sizeEl) sizeEl.textContent = '~45 MB';
+  });
 </script>
 
 </body>
