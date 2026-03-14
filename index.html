@@ -1031,6 +1031,10 @@ body {
   transform: translateY(-2px);
 }
 
+.export-card-centered {
+  grid-column: 2;
+}
+
 .export-card-icon {
   width: 56px;
   height: 56px;
@@ -1804,7 +1808,8 @@ body {
   .feature-card.highlight .feature-visual { height: 160px !important; }
 
   .pricing-card { padding: 28px 20px !important; width: 100% !important; box-sizing: border-box !important; }
-  .export-card { width: 100% !important; box-sizing: border-box !important; }
+  .export-card { width: 100% !important; box-sizing: border-box !important; grid-column: auto !important; }
+  .export-card-centered { grid-column: auto !important; }
 
   .hero-stats { flex-direction: column !important; gap: 16px !important; }
   .hero-actions { flex-direction: column !important; }
@@ -2152,7 +2157,7 @@ body {
         <div class="export-card-title">PNG &amp; TGA Sequences</div>
         <div class="export-card-desc">Export as PNG or TGA image sequences with alpha channel for compositing in external video editors and broadcast workflows.</div>
       </div>
-      <div class="export-card" style="grid-column: 2;">
+      <div class="export-card export-card-centered">
         <div class="export-card-icon" style="background: rgba(0,220,130,0.1); border: 1px solid rgba(0,220,130,0.15); color: #00dc82;">MOV</div>
         <div class="export-card-title">MOV ProRes 4444</div>
         <div class="export-card-desc">Export video with full alpha channel transparency using ProRes 4444 codec, ideal for playout systems and video editing pipelines.</div>
