@@ -44,7 +44,14 @@
       <h1>Preparing your download...</h1>
       <p>DJ HTML Creator will start downloading automatically.<br>If it doesn't, <a id="manual-link" href="https://github.com/admindjsoft/djhtml-releases/releases/latest">click here</a>.</p>
     </div>
-    <div id="error" class="error">
+    <div id="success" style="display:none;">
+      <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#27ae60" stroke-width="2" style="margin-bottom:20px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <h1>Your download has started!</h1>
+      <p id="filename-info" style="margin-bottom:16px;"></p>
+      <p>Check your browser's download bar or downloads folder.<br>
+      If the download didn't start, <a id="retry-link" href="#">click here to try again</a>.</p>
+    </div>
+    <div id="error" style="display:none;">
       <h1>Download</h1>
       <p>Could not fetch the latest release automatically.</p>
       <p style="margin-top: 16px;"><a href="https://github.com/admindjsoft/djhtml-releases/releases/latest">Download from GitHub Releases</a></p>
@@ -64,8 +71,15 @@
             }
           }
           if (asset) {
-            document.getElementById('manual-link').href = asset.browser_download_url;
-            window.location.href = asset.browser_download_url;
+            var url = asset.browser_download_url;
+            document.getElementById('manual-link').href = url;
+            document.getElementById('retry-link').href = url;
+            document.getElementById('filename-info').textContent = asset.name;
+            window.location.href = url;
+            setTimeout(function() {
+              document.getElementById('loading').style.display = 'none';
+              document.getElementById('success').style.display = 'block';
+            }, 1500);
           } else {
             throw new Error('No .exe asset found');
           }
