@@ -44,6 +44,7 @@ html {
   scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: var(--border-light) var(--bg-primary);
+  overflow-x: hidden;
 }
 
 body {
@@ -287,6 +288,27 @@ body {
 }
 
 .mobile-toggle svg { width: 24px; height: 24px; }
+
+/* Mobile menu open state */
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  right: 0;
+  background: rgba(8, 8, 12, 0.97);
+  backdrop-filter: blur(20px);
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  gap: 4px;
+}
+
+.nav-links.show a {
+  padding: 12px 16px;
+  width: 100%;
+  display: block;
+}
 
 /* ═══════════════════════════════════════════════════════════════
    HERO SECTION
@@ -1753,11 +1775,16 @@ body {
 }
 
 @media (max-width: 768px) {
-  .section { padding: 80px 20px; }
-  .hero { padding: 100px 20px 60px; }
+  .section { padding: 60px 16px; }
+  .hero { padding: 90px 16px 50px; }
+  .hero-content { max-width: 100%; }
 
+  .navbar { padding: 0 16px; }
   .nav-links { display: none; }
+  .nav-cta { display: none; }
   .mobile-toggle { display: block; }
+
+  .hero-title { font-size: clamp(28px, 8vw, 42px); }
 
   .features-grid { grid-template-columns: 1fr; }
   .feature-card.highlight {
@@ -1767,24 +1794,43 @@ body {
   .feature-card.highlight .feature-visual { height: 160px; }
 
   .tutorials-grid { grid-template-columns: 1fr; }
-  .pricing-cards { grid-template-columns: 1fr; }
+  .pricing-cards { grid-template-columns: 1fr; max-width: 100%; }
   .testimonials-grid { grid-template-columns: 1fr; }
   .export-cards { grid-template-columns: 1fr; }
   .workflow-grid { grid-template-columns: 1fr; }
 
-  .hero-stats { flex-direction: column; gap: 24px; }
+  .hero-stats { flex-direction: column; gap: 16px; }
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; justify-content: center; }
 
   .mockup-content { grid-template-columns: 1fr; }
   .mockup-panel { display: none; }
-  .mockup-canvas { height: 260px; }
+  .mockup-canvas { height: 200px; }
 
-  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .section-title { font-size: clamp(24px, 6vw, 36px); }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .download-box { padding: 40px 24px; }
+  .download-box { padding: 32px 16px; }
   .download-actions { flex-direction: column; }
   .download-actions .btn { width: 100%; justify-content: center; }
+
+  /* Prevent any overflow */
+  img, video, iframe, svg { max-width: 100%; height: auto; }
+  .feature-card, .export-card, .workflow-step, .tutorial-card { max-width: 100%; overflow: hidden; }
+  .bg-glow { display: none; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 48px 12px; }
+  .hero { padding: 80px 12px 40px; }
+  .navbar { padding: 0 12px; }
+  .hero-badge { margin-bottom: 20px; }
+  .hero-badge-text { font-size: 11px; }
+  .hero-title { font-size: clamp(24px, 8vw, 34px); }
+  .section-title { font-size: clamp(20px, 6vw, 28px); }
+  .footer-grid { grid-template-columns: 1fr; }
+  .pricing-cards { gap: 16px; }
 }
 
 /* ═══════════════════════════════════════════════════════════════
