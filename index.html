@@ -1794,9 +1794,10 @@ body {
   .feature-card.highlight .feature-visual { height: 160px; }
 
   .tutorials-grid { grid-template-columns: 1fr; }
-  .pricing-cards { grid-template-columns: 1fr; max-width: 100%; }
+  .pricing-cards { grid-template-columns: 1fr !important; max-width: 100%; }
+  .pricing-card { padding: 28px 20px; }
   .testimonials-grid { grid-template-columns: 1fr; }
-  .export-cards { grid-template-columns: 1fr; }
+  .export-cards { grid-template-columns: 1fr !important; }
   .workflow-grid { grid-template-columns: 1fr; }
 
   .hero-stats { flex-direction: column; gap: 16px; }
@@ -2126,7 +2127,7 @@ body {
       <p class="section-desc">Export your graphics in the format that fits your production pipeline.</p>
     </div>
 
-    <div class="export-cards stagger reveal" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="export-cards stagger reveal">
       <div class="export-card">
         <div class="export-card-icon" style="background: rgba(0,212,255,0.1); border: 1px solid rgba(0,212,255,0.15); color: var(--accent);">HTML</div>
         <div class="export-card-title">HTML + JavaScript</div>
@@ -2240,7 +2241,7 @@ body {
       <p class="section-desc">Choose the plan that works for you. Switch anytime.</p>
     </div>
 
-    <div class="pricing-cards reveal" style="grid-template-columns: repeat(3, 1fr);">
+    <div class="pricing-cards reveal">
       <!-- Free Trial -->
       <div class="pricing-card">
         <div class="pricing-plan">Free Trial</div>
