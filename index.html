@@ -1877,6 +1877,15 @@ body {
   transform: translateY(0);
 }
 </style>
+<!-- Paddle.js Checkout -->
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  // TODO: Replace with your actual Paddle client-side token after approval
+  // Sandbox token for testing — switch to live token before going live
+  // Paddle.Environment.set('sandbox');
+  // Paddle.Initialize({ token: 'test_xxxxxxxxxxxxxxxxxxxxxxx' });
+  Paddle.Initialize({ token: 'REPLACE_WITH_YOUR_PADDLE_CLIENT_TOKEN' });
+</script>
 </head>
 <body>
 
@@ -2323,7 +2332,7 @@ body {
             Email support
           </li>
         </ul>
-        <a href="https://djsoft.lemonsqueezy.com/checkout/buy/14124e0e-92dd-4ac5-99e6-ea1851814e7c" class="btn btn-secondary btn-large pricing-btn" target="_blank">Buy Monthly</a>
+        <a href="#" class="btn btn-secondary btn-large pricing-btn" onclick="Paddle.Checkout.open({items:[{priceId:'REPLACE_MONTHLY_PRICE_ID',quantity:1}]});return false;">Buy Monthly</a>
       </div>
 
       <!-- Annual Plan -->
@@ -2359,7 +2368,7 @@ body {
             Commercial license included
           </li>
         </ul>
-        <a href="https://djsoft.lemonsqueezy.com/checkout/buy/3929edf5-e8a0-4fa5-b876-4ed1b85bcca5" class="btn btn-primary btn-large pricing-btn" target="_blank">Get Annual Plan</a>
+        <a href="#" class="btn btn-primary btn-large pricing-btn" onclick="Paddle.Checkout.open({items:[{priceId:'REPLACE_ANNUAL_PRICE_ID',quantity:1}]});return false;">Get Annual Plan</a>
       </div>
     </div>
   </div>
@@ -2507,8 +2516,11 @@ body {
       </ul>
     </div>
     <div>
-      <div class="footer-col-title">Company</div>
+      <div class="footer-col-title">Legal</div>
       <ul class="footer-links">
+        <li><a href="https://djhtmlcreator.com/terms.html#terms">Terms of Service</a></li>
+        <li><a href="https://djhtmlcreator.com/terms.html#privacy">Privacy Policy</a></li>
+        <li><a href="https://djhtmlcreator.com/terms.html#refund">Refund Policy</a></li>
         <li><a href="mailto:support@djhtmlcreator.com">Contact: support@djhtmlcreator.com</a></li>
       </ul>
     </div>
