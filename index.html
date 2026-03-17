@@ -1924,7 +1924,7 @@ body {
   <div class="hero-content">
     <div class="hero-badge">
       <div class="hero-badge-dot"></div>
-      <span class="hero-badge-text">Version 1.0 — Now Available</span>
+      <span class="hero-badge-text" id="hero-version">Version 1.0 — Now Available</span>
     </div>
     <h1 class="hero-title">
       Motion Graphics<br>
@@ -2567,10 +2567,13 @@ function toggleFaq(item) {
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(link => {
   link.addEventListener('click', (e) => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const href = link.getAttribute('href');
+    if (href && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   });
 });
@@ -2581,7 +2584,10 @@ fetch('https://api.github.com/repos/admindjsoft/djhtml-releases/releases/latest'
   .then(data => {
     const verEl = document.getElementById('dl-version');
     const sizeEl = document.getElementById('dl-size');
-    if (verEl) verEl.textContent = data.tag_name || data.name || 'v1.0';
+    const heroEl = document.getElementById('hero-version');
+    const ver = data.tag_name || data.name || 'v1.0';
+    if (verEl) verEl.textContent = ver;
+    if (heroEl) heroEl.textContent = ver + ' — Now Available';
     if (data.assets && data.assets.length > 0) {
       const exe = data.assets.find(a => a.name.endsWith('.exe')) || data.assets[0];
       if (sizeEl) sizeEl.textContent = (exe.size / (1024 * 1024)).toFixed(0) + ' MB';
