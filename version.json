@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
-  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.1.0/DJHTMLCreator_Setup_v1.1.0.exe",
-  "changelog": "Added oGraf and SPX export, Added Image container option for Image loader (preview for images in image loader), Bug fixes"
+  "version": "1.1.1",
+  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.1.1/DJHTMLCreator_Setup_v1.1.1.exe",
+  "changelog": "Added missed options for oGraf and SPX export, Bug fixes"
 }
