@@ -1,5 +1,5 @@
 {
-  "version": "1.2",
-  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.2/DJHTMLCreator_Setup_v1.2.exe",
-  "changelog": "Added size binding options (dynamic shape or image depending on text size and duration), Added transitions, Added new transform options (skew, perspective, flip ...), Bug fixes"
+  "version": "1.2.1",
+  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.2.1/DJHTMLCreator_Setup_v1.2.1.exe",
+  "changelog": "Bug fixes"
 }
