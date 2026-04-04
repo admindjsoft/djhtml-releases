@@ -1,5 +1,5 @@
 {
-  "version": "1.2.3",
-  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.2.3/DJHTMLCreator_Setup_v1.2.3.exe",
-  "changelog": "Added Smart guides, Bug fixes"
+  "version": "1.2.4",
+  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.2.4/DJHTMLCreator_Setup_v1.2.4.exe",
+  "changelog": "Webm VP9 support added for import and export, Bug fixes"
 }
