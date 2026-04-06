@@ -1,0 +1,2260 @@
+{
+  "MaskKeyframes": {
+    "0": {
+      "Invert": [],
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [],
+      "Feather": [],
+      "Shape": []
+    },
+    "1": {
+      "Invert": [],
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [],
+      "Feather": [],
+      "Shape": []
+    },
+    "2": {
+      "Invert": [],
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [
+        4,
+        10,
+        17,
+        21
+      ],
+      "Rotation": [],
+      "Opacity": [],
+      "Feather": [],
+      "Shape": []
+    },
+    "3": {
+      "Invert": [],
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [
+        0,
+        4,
+        21,
+        24
+      ],
+      "Rotation": [],
+      "Opacity": [],
+      "Feather": [],
+      "Shape": []
+    }
+  },
+  "MaskKeyframeValues": {
+    "0": {
+      "Invert": {},
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {},
+      "Feather": {},
+      "Shape": {}
+    },
+    "1": {
+      "Invert": {},
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {},
+      "Feather": {},
+      "Shape": {}
+    },
+    "2": {
+      "Invert": {},
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {
+        "4": [
+          0,
+          100
+        ],
+        "10": [
+          100,
+          100
+        ],
+        "17": [
+          100,
+          100
+        ],
+        "21": [
+          0,
+          100
+        ]
+      },
+      "Rotation": {},
+      "Opacity": {},
+      "Feather": {},
+      "Shape": {}
+    },
+    "3": {
+      "Invert": {},
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {
+        "0": [
+          0,
+          100
+        ],
+        "4": [
+          100,
+          100
+        ],
+        "21": [
+          100,
+          100
+        ],
+        "24": [
+          0,
+          100
+        ]
+      },
+      "Rotation": {},
+      "Opacity": {},
+      "Feather": {},
+      "Shape": {}
+    }
+  },
+  "MaskInterpolation": {
+    "0": {
+      "Invert": "Linear",
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "Feather": "Linear",
+      "Shape": "Linear"
+    },
+    "1": {
+      "Invert": "Linear",
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "Feather": "Linear",
+      "Shape": "Linear"
+    },
+    "2": {
+      "Invert": "Linear",
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "Feather": "Linear",
+      "Shape": "Linear"
+    },
+    "3": {
+      "Invert": "Linear",
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "Feather": "Linear",
+      "Shape": "Linear"
+    }
+  },
+  "MaskKeyframeEasing": {
+    "1": {
+      "3": {
+        "4": 0,
+        "21": 0,
+        "24": 0
+      }
+    },
+    "0": {
+      "3": {
+        "10": 0,
+        "17": 0,
+        "21": 0
+      }
+    }
+  },
+  "MaskKeyframeCustomBezier": {},
+  "Format": "htmc1",
+  "Composition": {
+    "CompositionName": "New composition",
+    "Width": 1920,
+    "Height": 1080,
+    "FrameRate": 25,
+    "DurationFrames": 25
+  },
+  "PlayheadFrame": 15,
+  "WorkInFrame": 0,
+  "WorkOutFrame": 24,
+  "StopMarkerFrame": 15,
+  "LayerNames": [
+    "Text",
+    "Text1",
+    "Rectangle",
+    "Rectangle"
+  ],
+  "LayerExpanded": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "LayerLocked": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "LayerVisible": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "LayerLoop": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "LayerColorIndex": [
+    0,
+    0,
+    3,
+    2
+  ],
+  "LayerHasMask": [
+    false,
+    false,
+    true,
+    true
+  ],
+  "MaskExpanded": [
+    false,
+    false,
+    false,
+    true
+  ],
+  "MaskInvert": [
+    false,
+    false,
+    false,
+    false
+  ],
+  "MaskPinned": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "MaskFeather": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "MaskPinRefFrame": [
+    0,
+    0,
+    4,
+    0
+  ],
+  "MaskPinLayerMatrix": [
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      0,
+      1,
+      0,
+      0
+    ],
+    [
+      1,
+      0,
+      -0,
+      1,
+      -5,
+      730
+    ],
+    [
+      1,
+      0,
+      -0,
+      1,
+      1212,
+      798
+    ]
+  ],
+  "MaskTransforms": {
+    "0": {
+      "AnchorX": 960,
+      "AnchorY": 540,
+      "PosX": 0,
+      "PosY": 0,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "1": {
+      "AnchorX": 960,
+      "AnchorY": 540,
+      "PosX": 0,
+      "PosY": 0,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "2": {
+      "AnchorX": 1328.5,
+      "AnchorY": 104,
+      "PosX": 0,
+      "PosY": 0,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "3": {
+      "AnchorX": 0,
+      "AnchorY": 176.45982406259907,
+      "PosX": 0,
+      "PosY": -72.45982406259904,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    }
+  },
+  "MaskShapePoints": {
+    "3": [
+      0,
+      0,
+      110,
+      0,
+      110,
+      352.91964812519814,
+      0,
+      352.91964812519814
+    ],
+    "2": [
+      0,
+      0,
+      1329,
+      0,
+      1329,
+      208,
+      0,
+      208
+    ]
+  },
+  "Clips": [
+    {
+      "TrackIndex": 0,
+      "StartFrame": 0,
+      "Fps": 25,
+      "FramePaths": [],
+      "DisplayLengthFrames": 25,
+      "SourceInFrames": 0,
+      "FreezeTail": false,
+      "StretchFactor": 1,
+      "IsSolid": false,
+      "SolidColor": "#FFFFFFFF",
+      "IsText": true,
+      "IsTextBlock": false,
+      "TextVerticalAlign": "Bottom",
+      "Text": "Your text goes here DJ HTML",
+      "FontFamilyName": "Arial",
+      "FontSize": 72,
+      "FontWeight": "Normal",
+      "FontStyle": "Normal",
+      "TextColor": "#FF000000",
+      "TextBgColor": "#00FFFFFF",
+      "TextAlignment": "Left",
+      "LineHeight": 0,
+      "LetterSpacing": 0,
+      "TabularNums": false,
+      "AllCaps": false,
+      "UseFitWidth": false,
+      "FitWidthValue": 400,
+      "UseOutline": false,
+      "OutlineColor": "#FF000000",
+      "OutlineThickness": 2,
+      "UseShadow": false,
+      "ShadowColor": "#FF000000",
+      "ShadowOpacity": 0.5,
+      "ShadowBlur": 12,
+      "ShadowDistance": 6,
+      "ShadowAngle": 135,
+      "IsShape": false,
+      "ShapeFillColor": "#FF0078FF",
+      "ShapeNoFill": false,
+      "ShapeOpen": false,
+      "ShapeStrokeWidth": 2,
+      "ShapeWidth": 0,
+      "ShapeHeight": 0,
+      "ShapePoints": [],
+      "IsGradientFill": false,
+      "GradientColor2": "#FFFFFFFF",
+      "IsRadialGradient": false,
+      "IsReflectedGradient": false,
+      "GradientAngle": 0,
+      "GradientStop1Offset": 0,
+      "GradientStop2Offset": 1,
+      "IsImageLoader": false,
+      "ImageLoaderFit": "fill",
+      "ContainerImageProjectItemId": "",
+      "IsAtlas": false,
+      "AtlasSourcePath": "",
+      "AtlasColumns": 1,
+      "AtlasRows": 1,
+      "AtlasTotalFrames": 0,
+      "AtlasColumnMajor": false,
+      "AtlasSkipEmpty": true,
+      "AtlasFrameWidth": 0,
+      "AtlasFrameHeight": 0,
+      "AtlasSpacing": 0,
+      "AtlasReadOrder": "RowMajor",
+      "IsCrawl": false,
+      "CrawlSpeed": 5,
+      "CrawlRightToLeft": true,
+      "CrawlGap": 200,
+      "CrawlStartPos": 2,
+      "IsVideo": false,
+      "VideoSourcePath": "",
+      "IsCompositionReference": false,
+      "LayerId": "dba5c81d-43b7-43e2-b006-4a1fc4a8b0a4",
+      "SizeBindSourceLayerId": "",
+      "SizeBindMode": "both",
+      "SizeBindPaddingLeft": 0,
+      "SizeBindPaddingRight": 0,
+      "SizeBindPaddingTop": 0,
+      "SizeBindPaddingBottom": 0
+    },
+    {
+      "TrackIndex": 1,
+      "StartFrame": 0,
+      "Fps": 25,
+      "FramePaths": [],
+      "DisplayLengthFrames": 25,
+      "SourceInFrames": 0,
+      "FreezeTail": false,
+      "StretchFactor": 1,
+      "IsSolid": false,
+      "SolidColor": "#FFFFFFFF",
+      "IsText": true,
+      "IsTextBlock": false,
+      "TextVerticalAlign": "Bottom",
+      "Text": "Your text goes here DJ HTML",
+      "FontFamilyName": "Arial",
+      "FontSize": 50.5,
+      "FontWeight": "Normal",
+      "FontStyle": "Normal",
+      "TextColor": "#FF000000",
+      "TextBgColor": "#00FFFFFF",
+      "TextAlignment": "Left",
+      "LineHeight": 0,
+      "LetterSpacing": 0,
+      "TabularNums": false,
+      "AllCaps": false,
+      "UseFitWidth": false,
+      "FitWidthValue": 400,
+      "UseOutline": false,
+      "OutlineColor": "#FF000000",
+      "OutlineThickness": 2,
+      "UseShadow": false,
+      "ShadowColor": "#FF000000",
+      "ShadowOpacity": 0.5,
+      "ShadowBlur": 12,
+      "ShadowDistance": 6,
+      "ShadowAngle": 135,
+      "IsShape": false,
+      "ShapeFillColor": "#FF0078FF",
+      "ShapeNoFill": false,
+      "ShapeOpen": false,
+      "ShapeStrokeWidth": 2,
+      "ShapeWidth": 0,
+      "ShapeHeight": 0,
+      "ShapePoints": [],
+      "IsGradientFill": false,
+      "GradientColor2": "#FFFFFFFF",
+      "IsRadialGradient": false,
+      "IsReflectedGradient": false,
+      "GradientAngle": 0,
+      "GradientStop1Offset": 0,
+      "GradientStop2Offset": 1,
+      "IsImageLoader": false,
+      "ImageLoaderFit": "fill",
+      "ContainerImageProjectItemId": "",
+      "IsAtlas": false,
+      "AtlasSourcePath": "",
+      "AtlasColumns": 1,
+      "AtlasRows": 1,
+      "AtlasTotalFrames": 0,
+      "AtlasColumnMajor": false,
+      "AtlasSkipEmpty": true,
+      "AtlasFrameWidth": 0,
+      "AtlasFrameHeight": 0,
+      "AtlasSpacing": 0,
+      "AtlasReadOrder": "RowMajor",
+      "IsCrawl": false,
+      "CrawlSpeed": 5,
+      "CrawlRightToLeft": true,
+      "CrawlGap": 200,
+      "CrawlStartPos": 2,
+      "IsVideo": false,
+      "VideoSourcePath": "",
+      "IsCompositionReference": false,
+      "LayerId": "cce2c6bb-0252-4690-a50d-3f5cc04f3b36",
+      "SizeBindSourceLayerId": "",
+      "SizeBindMode": "both",
+      "SizeBindPaddingLeft": 0,
+      "SizeBindPaddingRight": 0,
+      "SizeBindPaddingTop": 0,
+      "SizeBindPaddingBottom": 0
+    },
+    {
+      "TrackIndex": 3,
+      "StartFrame": 0,
+      "Fps": 25,
+      "FramePaths": [],
+      "DisplayLengthFrames": 25,
+      "SourceInFrames": 0,
+      "FreezeTail": false,
+      "StretchFactor": 1,
+      "IsSolid": false,
+      "SolidColor": "#FFFFFFFF",
+      "IsText": false,
+      "IsTextBlock": false,
+      "TextVerticalAlign": "Bottom",
+      "Text": "",
+      "FontFamilyName": "Arial",
+      "FontSize": 72,
+      "FontWeight": "Normal",
+      "FontStyle": "Normal",
+      "TextColor": "#FFFFFFFF",
+      "TextBgColor": "#00FFFFFF",
+      "TextAlignment": "Left",
+      "LineHeight": 0,
+      "LetterSpacing": 0,
+      "TabularNums": false,
+      "AllCaps": false,
+      "UseFitWidth": false,
+      "FitWidthValue": 400,
+      "UseOutline": false,
+      "OutlineColor": "#FF000000",
+      "OutlineThickness": 2,
+      "UseShadow": false,
+      "ShadowColor": "#FF000000",
+      "ShadowOpacity": 0.5,
+      "ShadowBlur": 12,
+      "ShadowDistance": 6,
+      "ShadowAngle": 135,
+      "IsShape": true,
+      "ShapeFillColor": "#FFFFAE00",
+      "ShapeNoFill": false,
+      "ShapeOpen": false,
+      "ShapeStrokeWidth": 2,
+      "ShapeWidth": 110,
+      "ShapeHeight": 208,
+      "ShapePoints": [
+        [
+          0,
+          0
+        ],
+        [
+          110,
+          0
+        ],
+        [
+          110,
+          208
+        ],
+        [
+          0,
+          208
+        ]
+      ],
+      "IsGradientFill": false,
+      "GradientColor2": "#FFFFFFFF",
+      "IsRadialGradient": false,
+      "IsReflectedGradient": false,
+      "GradientAngle": 0,
+      "GradientStop1Offset": 0,
+      "GradientStop2Offset": 1,
+      "IsImageLoader": false,
+      "ImageLoaderFit": "fill",
+      "ContainerImageProjectItemId": "",
+      "IsAtlas": false,
+      "AtlasSourcePath": "",
+      "AtlasColumns": 1,
+      "AtlasRows": 1,
+      "AtlasTotalFrames": 0,
+      "AtlasColumnMajor": false,
+      "AtlasSkipEmpty": true,
+      "AtlasFrameWidth": 0,
+      "AtlasFrameHeight": 0,
+      "AtlasSpacing": 0,
+      "AtlasReadOrder": "RowMajor",
+      "IsCrawl": false,
+      "CrawlSpeed": 5,
+      "CrawlRightToLeft": true,
+      "CrawlGap": 200,
+      "CrawlStartPos": 2,
+      "IsVideo": false,
+      "VideoSourcePath": "",
+      "IsCompositionReference": false,
+      "LayerId": "e822d7f2-aae5-47e1-b4e6-78cd993962c5",
+      "SizeBindSourceLayerId": "",
+      "SizeBindMode": "both",
+      "SizeBindPaddingLeft": 0,
+      "SizeBindPaddingRight": 0,
+      "SizeBindPaddingTop": 0,
+      "SizeBindPaddingBottom": 0
+    },
+    {
+      "TrackIndex": 2,
+      "StartFrame": 0,
+      "Fps": 25,
+      "FramePaths": [],
+      "DisplayLengthFrames": 25,
+      "SourceInFrames": 0,
+      "FreezeTail": false,
+      "StretchFactor": 1,
+      "IsSolid": false,
+      "SolidColor": "#FFFFFFFF",
+      "IsText": false,
+      "IsTextBlock": false,
+      "TextVerticalAlign": "Bottom",
+      "Text": "",
+      "FontFamilyName": "Arial",
+      "FontSize": 72,
+      "FontWeight": "Normal",
+      "FontStyle": "Normal",
+      "TextColor": "#FFFFFFFF",
+      "TextBgColor": "#00FFFFFF",
+      "TextAlignment": "Left",
+      "LineHeight": 0,
+      "LetterSpacing": 0,
+      "TabularNums": false,
+      "AllCaps": false,
+      "UseFitWidth": false,
+      "FitWidthValue": 400,
+      "UseOutline": false,
+      "OutlineColor": "#FF000000",
+      "OutlineThickness": 2,
+      "UseShadow": false,
+      "ShadowColor": "#FF000000",
+      "ShadowOpacity": 0.5,
+      "ShadowBlur": 12,
+      "ShadowDistance": 6,
+      "ShadowAngle": 135,
+      "IsShape": true,
+      "ShapeFillColor": "#FFEFEFEF",
+      "ShapeNoFill": false,
+      "ShapeOpen": false,
+      "ShapeStrokeWidth": 2,
+      "ShapeWidth": 1329,
+      "ShapeHeight": 208,
+      "ShapePoints": [
+        [
+          0,
+          0
+        ],
+        [
+          1329,
+          0
+        ],
+        [
+          1329,
+          208
+        ],
+        [
+          0,
+          208
+        ]
+      ],
+      "IsGradientFill": false,
+      "GradientColor2": "#FFFFFFFF",
+      "IsRadialGradient": false,
+      "IsReflectedGradient": false,
+      "GradientAngle": 0,
+      "GradientStop1Offset": 0,
+      "GradientStop2Offset": 1,
+      "IsImageLoader": false,
+      "ImageLoaderFit": "fill",
+      "ContainerImageProjectItemId": "",
+      "IsAtlas": false,
+      "AtlasSourcePath": "",
+      "AtlasColumns": 1,
+      "AtlasRows": 1,
+      "AtlasTotalFrames": 0,
+      "AtlasColumnMajor": false,
+      "AtlasSkipEmpty": true,
+      "AtlasFrameWidth": 0,
+      "AtlasFrameHeight": 0,
+      "AtlasSpacing": 0,
+      "AtlasReadOrder": "RowMajor",
+      "IsCrawl": false,
+      "CrawlSpeed": 5,
+      "CrawlRightToLeft": true,
+      "CrawlGap": 200,
+      "CrawlStartPos": 2,
+      "IsVideo": false,
+      "VideoSourcePath": "",
+      "IsCompositionReference": false,
+      "LayerId": "81a478cc-50e8-41d1-bb0b-519f90e6c16c",
+      "SizeBindSourceLayerId": "",
+      "SizeBindMode": "both",
+      "SizeBindPaddingLeft": 0,
+      "SizeBindPaddingRight": 0,
+      "SizeBindPaddingTop": 0,
+      "SizeBindPaddingBottom": 0
+    }
+  ],
+  "LayerTransforms": {
+    "0": {
+      "AnchorX": 0,
+      "AnchorY": 80.98354176839193,
+      "PosX": 170,
+      "PosY": 753.0164582316081,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 0,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "1": {
+      "AnchorX": 0,
+      "AnchorY": 56.7991259765625,
+      "PosX": 170,
+      "PosY": 845.2008740234376,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "2": {
+      "AnchorX": 664.5,
+      "AnchorY": 104,
+      "PosX": -5,
+      "PosY": 730,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": 0,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    },
+    "3": {
+      "AnchorX": 55,
+      "AnchorY": 104,
+      "PosX": 1212,
+      "PosY": 798,
+      "ScaleH": 100,
+      "ScaleW": 100,
+      "RotTurns": 0,
+      "RotDeg": 0,
+      "Opacity": 100,
+      "SkewX": 0,
+      "SkewY": -52.8,
+      "PerspTLX": 0,
+      "PerspTLY": 0,
+      "PerspTRX": 0,
+      "PerspTRY": 0,
+      "PerspBRX": 0,
+      "PerspBRY": 0,
+      "PerspBLX": 0,
+      "PerspBLY": 0
+    }
+  },
+  "LayerKeyframes": {
+    "0": {
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [
+        9,
+        12,
+        16,
+        18
+      ],
+      "FontSize": [],
+      "ShapeSize": [],
+      "Skew": [],
+      "Perspective": [],
+      "Feather": []
+    },
+    "1": {
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [
+        11,
+        14,
+        15,
+        17
+      ],
+      "FontSize": [],
+      "ShapeSize": [],
+      "Skew": [],
+      "Perspective": [],
+      "Feather": []
+    },
+    "2": {
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [],
+      "FontSize": [],
+      "ShapeSize": [],
+      "Skew": [],
+      "Perspective": [],
+      "Feather": []
+    },
+    "3": {
+      "AnchorPoint": [],
+      "Position": [],
+      "Scale": [],
+      "Rotation": [],
+      "Opacity": [],
+      "FontSize": [],
+      "ShapeSize": [],
+      "Skew": [],
+      "Perspective": [],
+      "Feather": []
+    }
+  },
+  "LayerKeyframeValues": {
+    "0": {
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {
+        "9": [
+          0
+        ],
+        "12": [
+          100
+        ],
+        "16": [
+          100
+        ],
+        "18": [
+          0
+        ]
+      },
+      "FontSize": {},
+      "ShapeSize": {},
+      "Skew": {},
+      "Perspective": {},
+      "Feather": {}
+    },
+    "1": {
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {
+        "11": [
+          0
+        ],
+        "14": [
+          100
+        ],
+        "15": [
+          100
+        ],
+        "17": [
+          0
+        ]
+      },
+      "FontSize": {},
+      "ShapeSize": {},
+      "Skew": {},
+      "Perspective": {},
+      "Feather": {}
+    },
+    "2": {
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {},
+      "FontSize": {},
+      "ShapeSize": {},
+      "Skew": {},
+      "Perspective": {},
+      "Feather": {}
+    },
+    "3": {
+      "AnchorPoint": {},
+      "Position": {},
+      "Scale": {},
+      "Rotation": {},
+      "Opacity": {},
+      "FontSize": {},
+      "ShapeSize": {},
+      "Skew": {},
+      "Perspective": {},
+      "Feather": {}
+    }
+  },
+  "LayerInterpolation": {
+    "0": {
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "FontSize": "Linear",
+      "ShapeSize": "Linear",
+      "Skew": "Linear",
+      "Perspective": "Linear",
+      "Feather": "Linear"
+    },
+    "1": {
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "FontSize": "Linear",
+      "ShapeSize": "Linear",
+      "Skew": "Linear",
+      "Perspective": "Linear",
+      "Feather": "Linear"
+    },
+    "2": {
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "FontSize": "Linear",
+      "ShapeSize": "Linear",
+      "Skew": "Linear",
+      "Perspective": "Linear",
+      "Feather": "Linear"
+    },
+    "3": {
+      "AnchorPoint": "Linear",
+      "Position": "Linear",
+      "Scale": "Linear",
+      "Rotation": "Linear",
+      "Opacity": "Linear",
+      "FontSize": "Linear",
+      "ShapeSize": "Linear",
+      "Skew": "Linear",
+      "Perspective": "Linear",
+      "Feather": "Linear"
+    }
+  },
+  "LayerKeyframeEasing": {
+    "0": {
+      "4": {
+        "16": 0,
+        "18": 0
+      }
+    },
+    "1": {
+      "4": {
+        "15": 0,
+        "17": 0
+      }
+    }
+  },
+  "LayerKeyframeCustomBezier": {},
+  "ActiveCompositionId": "79439cb8-7bfd-474c-a0d1-4072bd27a6ad",
+  "AllCompositions": [
+    {
+      "Id": "79439cb8-7bfd-474c-a0d1-4072bd27a6ad",
+      "Name": "Main Comp",
+      "Width": 1920,
+      "Height": 1080,
+      "Fps": 25,
+      "DurationFrames": 25,
+      "BackgroundColor": "#00FFFFFF",
+      "WorkInFrame": 0,
+      "WorkOutFrame": 24,
+      "PlayheadFrame": 15,
+      "StopMarkerFrame": 15,
+      "TrackCount": 4,
+      "LayerNames": [
+        "Text",
+        "Text1",
+        "Rectangle",
+        "Rectangle"
+      ],
+      "LayerExpanded": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "LayerLocked": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "LayerVisible": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "LayerLoop": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "LayerColorIndex": [
+        0,
+        0,
+        3,
+        2
+      ],
+      "LayerHasMask": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "MaskExpanded": [
+        false,
+        false,
+        false,
+        true
+      ],
+      "MaskInvert": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "MaskLocked": [
+        false,
+        false,
+        true,
+        true
+      ],
+      "MaskPinned": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "MaskFeather": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "MaskPinRefFrame": [
+        0,
+        0,
+        4,
+        0
+      ],
+      "MaskPinLayerMatrix": [
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          -0,
+          1,
+          -5,
+          730
+        ],
+        [
+          1,
+          0,
+          -0,
+          1,
+          1212,
+          798
+        ]
+      ],
+      "Clips": [
+        {
+          "TrackIndex": 0,
+          "StartFrame": 0,
+          "Fps": 25,
+          "FramePaths": [],
+          "DisplayLengthFrames": 25,
+          "SourceInFrames": 0,
+          "FreezeTail": false,
+          "StretchFactor": 1,
+          "IsSolid": false,
+          "SolidColor": "#FFFFFFFF",
+          "IsText": true,
+          "IsTextBlock": false,
+          "TextVerticalAlign": "Bottom",
+          "Text": "Your text goes here DJ HTML",
+          "FontFamilyName": "Arial",
+          "FontSize": 72,
+          "FontWeight": "Normal",
+          "FontStyle": "Normal",
+          "TextColor": "#FF000000",
+          "TextBgColor": "#00FFFFFF",
+          "TextAlignment": "Left",
+          "LineHeight": 0,
+          "LetterSpacing": 0,
+          "TabularNums": false,
+          "AllCaps": false,
+          "UseFitWidth": false,
+          "FitWidthValue": 400,
+          "UseOutline": false,
+          "OutlineColor": "#FF000000",
+          "OutlineThickness": 2,
+          "UseShadow": false,
+          "ShadowColor": "#FF000000",
+          "ShadowOpacity": 0.5,
+          "ShadowBlur": 12,
+          "ShadowDistance": 6,
+          "ShadowAngle": 135,
+          "IsShape": false,
+          "ShapeFillColor": "#FF0078FF",
+          "ShapeNoFill": false,
+          "ShapeOpen": false,
+          "ShapeStrokeWidth": 2,
+          "ShapeWidth": 0,
+          "ShapeHeight": 0,
+          "ShapePoints": [],
+          "IsGradientFill": false,
+          "GradientColor2": "#FFFFFFFF",
+          "IsRadialGradient": false,
+          "IsReflectedGradient": false,
+          "GradientAngle": 0,
+          "GradientStop1Offset": 0,
+          "GradientStop2Offset": 1,
+          "IsImageLoader": false,
+          "ImageLoaderFit": "fill",
+          "ContainerImageProjectItemId": "",
+          "IsAtlas": false,
+          "AtlasSourcePath": "",
+          "AtlasColumns": 1,
+          "AtlasRows": 1,
+          "AtlasTotalFrames": 0,
+          "AtlasColumnMajor": false,
+          "AtlasSkipEmpty": true,
+          "AtlasFrameWidth": 0,
+          "AtlasFrameHeight": 0,
+          "AtlasSpacing": 0,
+          "AtlasReadOrder": "RowMajor",
+          "IsCrawl": false,
+          "CrawlSpeed": 5,
+          "CrawlRightToLeft": true,
+          "CrawlGap": 200,
+          "CrawlStartPos": 2,
+          "IsVideo": false,
+          "VideoSourcePath": "",
+          "IsCompositionReference": false,
+          "LayerId": "dba5c81d-43b7-43e2-b006-4a1fc4a8b0a4",
+          "SizeBindSourceLayerId": "",
+          "SizeBindMode": "both",
+          "SizeBindPaddingLeft": 0,
+          "SizeBindPaddingRight": 0,
+          "SizeBindPaddingTop": 0,
+          "SizeBindPaddingBottom": 0
+        },
+        {
+          "TrackIndex": 1,
+          "StartFrame": 0,
+          "Fps": 25,
+          "FramePaths": [],
+          "DisplayLengthFrames": 25,
+          "SourceInFrames": 0,
+          "FreezeTail": false,
+          "StretchFactor": 1,
+          "IsSolid": false,
+          "SolidColor": "#FFFFFFFF",
+          "IsText": true,
+          "IsTextBlock": false,
+          "TextVerticalAlign": "Bottom",
+          "Text": "Your text goes here DJ HTML",
+          "FontFamilyName": "Arial",
+          "FontSize": 50.5,
+          "FontWeight": "Normal",
+          "FontStyle": "Normal",
+          "TextColor": "#FF000000",
+          "TextBgColor": "#00FFFFFF",
+          "TextAlignment": "Left",
+          "LineHeight": 0,
+          "LetterSpacing": 0,
+          "TabularNums": false,
+          "AllCaps": false,
+          "UseFitWidth": false,
+          "FitWidthValue": 400,
+          "UseOutline": false,
+          "OutlineColor": "#FF000000",
+          "OutlineThickness": 2,
+          "UseShadow": false,
+          "ShadowColor": "#FF000000",
+          "ShadowOpacity": 0.5,
+          "ShadowBlur": 12,
+          "ShadowDistance": 6,
+          "ShadowAngle": 135,
+          "IsShape": false,
+          "ShapeFillColor": "#FF0078FF",
+          "ShapeNoFill": false,
+          "ShapeOpen": false,
+          "ShapeStrokeWidth": 2,
+          "ShapeWidth": 0,
+          "ShapeHeight": 0,
+          "ShapePoints": [],
+          "IsGradientFill": false,
+          "GradientColor2": "#FFFFFFFF",
+          "IsRadialGradient": false,
+          "IsReflectedGradient": false,
+          "GradientAngle": 0,
+          "GradientStop1Offset": 0,
+          "GradientStop2Offset": 1,
+          "IsImageLoader": false,
+          "ImageLoaderFit": "fill",
+          "ContainerImageProjectItemId": "",
+          "IsAtlas": false,
+          "AtlasSourcePath": "",
+          "AtlasColumns": 1,
+          "AtlasRows": 1,
+          "AtlasTotalFrames": 0,
+          "AtlasColumnMajor": false,
+          "AtlasSkipEmpty": true,
+          "AtlasFrameWidth": 0,
+          "AtlasFrameHeight": 0,
+          "AtlasSpacing": 0,
+          "AtlasReadOrder": "RowMajor",
+          "IsCrawl": false,
+          "CrawlSpeed": 5,
+          "CrawlRightToLeft": true,
+          "CrawlGap": 200,
+          "CrawlStartPos": 2,
+          "IsVideo": false,
+          "VideoSourcePath": "",
+          "IsCompositionReference": false,
+          "LayerId": "cce2c6bb-0252-4690-a50d-3f5cc04f3b36",
+          "SizeBindSourceLayerId": "",
+          "SizeBindMode": "both",
+          "SizeBindPaddingLeft": 0,
+          "SizeBindPaddingRight": 0,
+          "SizeBindPaddingTop": 0,
+          "SizeBindPaddingBottom": 0
+        },
+        {
+          "TrackIndex": 3,
+          "StartFrame": 0,
+          "Fps": 25,
+          "FramePaths": [],
+          "DisplayLengthFrames": 25,
+          "SourceInFrames": 0,
+          "FreezeTail": false,
+          "StretchFactor": 1,
+          "IsSolid": false,
+          "SolidColor": "#FFFFFFFF",
+          "IsText": false,
+          "IsTextBlock": false,
+          "TextVerticalAlign": "Bottom",
+          "Text": "",
+          "FontFamilyName": "Arial",
+          "FontSize": 72,
+          "FontWeight": "Normal",
+          "FontStyle": "Normal",
+          "TextColor": "#FFFFFFFF",
+          "TextBgColor": "#00FFFFFF",
+          "TextAlignment": "Left",
+          "LineHeight": 0,
+          "LetterSpacing": 0,
+          "TabularNums": false,
+          "AllCaps": false,
+          "UseFitWidth": false,
+          "FitWidthValue": 400,
+          "UseOutline": false,
+          "OutlineColor": "#FF000000",
+          "OutlineThickness": 2,
+          "UseShadow": false,
+          "ShadowColor": "#FF000000",
+          "ShadowOpacity": 0.5,
+          "ShadowBlur": 12,
+          "ShadowDistance": 6,
+          "ShadowAngle": 135,
+          "IsShape": true,
+          "ShapeFillColor": "#FFFFAE00",
+          "ShapeNoFill": false,
+          "ShapeOpen": false,
+          "ShapeStrokeWidth": 2,
+          "ShapeWidth": 110,
+          "ShapeHeight": 208,
+          "ShapePoints": [
+            [
+              0,
+              0
+            ],
+            [
+              110,
+              0
+            ],
+            [
+              110,
+              208
+            ],
+            [
+              0,
+              208
+            ]
+          ],
+          "IsGradientFill": false,
+          "GradientColor2": "#FFFFFFFF",
+          "IsRadialGradient": false,
+          "IsReflectedGradient": false,
+          "GradientAngle": 0,
+          "GradientStop1Offset": 0,
+          "GradientStop2Offset": 1,
+          "IsImageLoader": false,
+          "ImageLoaderFit": "fill",
+          "ContainerImageProjectItemId": "",
+          "IsAtlas": false,
+          "AtlasSourcePath": "",
+          "AtlasColumns": 1,
+          "AtlasRows": 1,
+          "AtlasTotalFrames": 0,
+          "AtlasColumnMajor": false,
+          "AtlasSkipEmpty": true,
+          "AtlasFrameWidth": 0,
+          "AtlasFrameHeight": 0,
+          "AtlasSpacing": 0,
+          "AtlasReadOrder": "RowMajor",
+          "IsCrawl": false,
+          "CrawlSpeed": 5,
+          "CrawlRightToLeft": true,
+          "CrawlGap": 200,
+          "CrawlStartPos": 2,
+          "IsVideo": false,
+          "VideoSourcePath": "",
+          "IsCompositionReference": false,
+          "LayerId": "e822d7f2-aae5-47e1-b4e6-78cd993962c5",
+          "SizeBindSourceLayerId": "",
+          "SizeBindMode": "both",
+          "SizeBindPaddingLeft": 0,
+          "SizeBindPaddingRight": 0,
+          "SizeBindPaddingTop": 0,
+          "SizeBindPaddingBottom": 0
+        },
+        {
+          "TrackIndex": 2,
+          "StartFrame": 0,
+          "Fps": 25,
+          "FramePaths": [],
+          "DisplayLengthFrames": 25,
+          "SourceInFrames": 0,
+          "FreezeTail": false,
+          "StretchFactor": 1,
+          "IsSolid": false,
+          "SolidColor": "#FFFFFFFF",
+          "IsText": false,
+          "IsTextBlock": false,
+          "TextVerticalAlign": "Bottom",
+          "Text": "",
+          "FontFamilyName": "Arial",
+          "FontSize": 72,
+          "FontWeight": "Normal",
+          "FontStyle": "Normal",
+          "TextColor": "#FFFFFFFF",
+          "TextBgColor": "#00FFFFFF",
+          "TextAlignment": "Left",
+          "LineHeight": 0,
+          "LetterSpacing": 0,
+          "TabularNums": false,
+          "AllCaps": false,
+          "UseFitWidth": false,
+          "FitWidthValue": 400,
+          "UseOutline": false,
+          "OutlineColor": "#FF000000",
+          "OutlineThickness": 2,
+          "UseShadow": false,
+          "ShadowColor": "#FF000000",
+          "ShadowOpacity": 0.5,
+          "ShadowBlur": 12,
+          "ShadowDistance": 6,
+          "ShadowAngle": 135,
+          "IsShape": true,
+          "ShapeFillColor": "#FFEFEFEF",
+          "ShapeNoFill": false,
+          "ShapeOpen": false,
+          "ShapeStrokeWidth": 2,
+          "ShapeWidth": 1329,
+          "ShapeHeight": 208,
+          "ShapePoints": [
+            [
+              0,
+              0
+            ],
+            [
+              1329,
+              0
+            ],
+            [
+              1329,
+              208
+            ],
+            [
+              0,
+              208
+            ]
+          ],
+          "IsGradientFill": false,
+          "GradientColor2": "#FFFFFFFF",
+          "IsRadialGradient": false,
+          "IsReflectedGradient": false,
+          "GradientAngle": 0,
+          "GradientStop1Offset": 0,
+          "GradientStop2Offset": 1,
+          "IsImageLoader": false,
+          "ImageLoaderFit": "fill",
+          "ContainerImageProjectItemId": "",
+          "IsAtlas": false,
+          "AtlasSourcePath": "",
+          "AtlasColumns": 1,
+          "AtlasRows": 1,
+          "AtlasTotalFrames": 0,
+          "AtlasColumnMajor": false,
+          "AtlasSkipEmpty": true,
+          "AtlasFrameWidth": 0,
+          "AtlasFrameHeight": 0,
+          "AtlasSpacing": 0,
+          "AtlasReadOrder": "RowMajor",
+          "IsCrawl": false,
+          "CrawlSpeed": 5,
+          "CrawlRightToLeft": true,
+          "CrawlGap": 200,
+          "CrawlStartPos": 2,
+          "IsVideo": false,
+          "VideoSourcePath": "",
+          "IsCompositionReference": false,
+          "LayerId": "81a478cc-50e8-41d1-bb0b-519f90e6c16c",
+          "SizeBindSourceLayerId": "",
+          "SizeBindMode": "both",
+          "SizeBindPaddingLeft": 0,
+          "SizeBindPaddingRight": 0,
+          "SizeBindPaddingTop": 0,
+          "SizeBindPaddingBottom": 0
+        }
+      ],
+      "LayerTransforms": {
+        "0": {
+          "AnchorX": 0,
+          "AnchorY": 80.98354176839193,
+          "PosX": 170,
+          "PosY": 753.0164582316081,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 0,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "1": {
+          "AnchorX": 0,
+          "AnchorY": 56.7991259765625,
+          "PosX": 170,
+          "PosY": 845.2008740234376,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "3": {
+          "AnchorX": 55,
+          "AnchorY": 104,
+          "PosX": 1212,
+          "PosY": 798,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": -52.8,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "2": {
+          "AnchorX": 664.5,
+          "AnchorY": 104,
+          "PosX": -5,
+          "PosY": 730,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        }
+      },
+      "MaskTransforms": {
+        "0": {
+          "AnchorX": 960,
+          "AnchorY": 540,
+          "PosX": 0,
+          "PosY": 0,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "1": {
+          "AnchorX": 960,
+          "AnchorY": 540,
+          "PosX": 0,
+          "PosY": 0,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "3": {
+          "AnchorX": 0,
+          "AnchorY": 176.45982406259907,
+          "PosX": 0,
+          "PosY": -72.45982406259904,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "2": {
+          "AnchorX": 1328.5,
+          "AnchorY": 104,
+          "PosX": 0,
+          "PosY": 0,
+          "ScaleH": 100,
+          "ScaleW": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        }
+      },
+      "MaskShapePoints": {
+        "3": [
+          0,
+          0,
+          110,
+          0,
+          110,
+          352.91964812519814,
+          0,
+          352.91964812519814
+        ],
+        "2": [
+          0,
+          0,
+          1329,
+          0,
+          1329,
+          208,
+          0,
+          208
+        ]
+      },
+      "LayerKeyframes": {
+        "0": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [
+            9,
+            12,
+            16,
+            18
+          ],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": []
+        },
+        "1": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [
+            11,
+            14,
+            15,
+            17
+          ],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": []
+        },
+        "3": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": []
+        },
+        "2": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": [],
+          "8": []
+        }
+      },
+      "LayerKeyframeValues": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {
+            "9": [
+              0
+            ],
+            "12": [
+              100
+            ],
+            "16": [
+              100
+            ],
+            "18": [
+              0
+            ]
+          },
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        },
+        "1": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {
+            "11": [
+              0
+            ],
+            "14": [
+              100
+            ],
+            "15": [
+              100
+            ],
+            "17": [
+              0
+            ]
+          },
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        },
+        "3": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        },
+        "2": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {},
+          "8": {}
+        }
+      },
+      "LayerKeyframeEasing": {
+        "0": {
+          "4": {
+            "16": 0,
+            "18": 0
+          }
+        },
+        "1": {
+          "4": {
+            "15": 0,
+            "17": 0
+          }
+        }
+      },
+      "MaskKeyframes": {
+        "0": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        },
+        "1": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        },
+        "3": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [
+            0,
+            4,
+            21,
+            24
+          ],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        },
+        "2": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [
+            4,
+            10,
+            17,
+            21
+          ],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        }
+      },
+      "MaskKeyframeValues": {
+        "0": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        },
+        "1": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {},
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        },
+        "3": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {
+            "0": [
+              0,
+              100
+            ],
+            "4": [
+              100,
+              100
+            ],
+            "21": [
+              100,
+              100
+            ],
+            "24": [
+              0,
+              100
+            ]
+          },
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        },
+        "2": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {
+            "4": [
+              0,
+              100
+            ],
+            "10": [
+              100,
+              100
+            ],
+            "17": [
+              100,
+              100
+            ],
+            "21": [
+              0,
+              100
+            ]
+          },
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        }
+      },
+      "MaskKeyframeEasing": {
+        "1": {
+          "3": {
+            "4": 0,
+            "21": 0,
+            "24": 0
+          }
+        },
+        "0": {
+          "3": {
+            "10": 0,
+            "17": 0,
+            "21": 0
+          }
+        }
+      },
+      "HorizontalGuides": [],
+      "VerticalGuides": [],
+      "LockedHorizontalGuides": [],
+      "LockedVerticalGuides": []
+    }
+  ],
+  "OpenTabIds": [
+    "79439cb8-7bfd-474c-a0d1-4072bd27a6ad"
+  ],
+  "ProjectItems": [
+    {
+      "Id": "b38a7e38-e9b0-4b5d-90c6-d30d7e61db17",
+      "Name": "Main Comp",
+      "ItemType": "Composition",
+      "ParentId": "",
+      "FilePath": "",
+      "FramePaths": [],
+      "Width": 1920,
+      "Height": 1080,
+      "Fps": 25,
+      "DurationFrames": 250,
+      "CompositionId": "79439cb8-7bfd-474c-a0d1-4072bd27a6ad",
+      "ResourceId": "",
+      "VideoSourcePath": "",
+      "ChildCount": 0,
+      "IsExpanded": false
+    }
+  ],
+  "ImportedFonts": [],
+  "HorizontalGuides": [],
+  "VerticalGuides": [],
+  "LockedHorizontalGuides": [],
+  "LockedVerticalGuides": [],
+  "TrackMasks": {
+    "3": [
+      {
+        "Name": "Mask 1",
+        "Mode": 0,
+        "Expanded": true,
+        "Invert": false,
+        "Locked": true,
+        "Pinned": true,
+        "Feather": 0,
+        "PinRefFrame": 0,
+        "PinLayerMatrix": [
+          1,
+          0,
+          -0,
+          1,
+          1212,
+          798
+        ],
+        "PinLayerMatrixValid": true,
+        "Transform": {
+          "AnchorX": 0,
+          "AnchorY": 176.45982406259907,
+          "PosX": 0,
+          "PosY": -72.45982406259904,
+          "ScaleW": 100,
+          "ScaleH": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "ShapePoints": [
+          0,
+          0,
+          110,
+          0,
+          110,
+          352.91964812519814,
+          0,
+          352.91964812519814
+        ],
+        "Keyframes": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [
+            0,
+            4,
+            21,
+            24
+          ],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        },
+        "KeyframeValues": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {
+            "0": [
+              0,
+              100
+            ],
+            "4": [
+              100,
+              100
+            ],
+            "21": [
+              100,
+              100
+            ],
+            "24": [
+              0,
+              100
+            ]
+          },
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        }
+      }
+    ],
+    "2": [
+      {
+        "Name": "Mask 1",
+        "Mode": 0,
+        "Expanded": false,
+        "Invert": false,
+        "Locked": true,
+        "Pinned": true,
+        "Feather": 0,
+        "PinRefFrame": 4,
+        "PinLayerMatrix": [
+          1,
+          0,
+          -0,
+          1,
+          -5,
+          730
+        ],
+        "PinLayerMatrixValid": true,
+        "Transform": {
+          "AnchorX": 1328.5,
+          "AnchorY": 104,
+          "PosX": 0,
+          "PosY": 0,
+          "ScaleW": 100,
+          "ScaleH": 100,
+          "RotTurns": 0,
+          "RotDeg": 0,
+          "Opacity": 100,
+          "SkewX": 0,
+          "SkewY": 0,
+          "PerspTLX": 0,
+          "PerspTLY": 0,
+          "PerspTRX": 0,
+          "PerspTRY": 0,
+          "PerspBRX": 0,
+          "PerspBRY": 0,
+          "PerspBLX": 0,
+          "PerspBLY": 0
+        },
+        "ShapePoints": [
+          0,
+          0,
+          1329,
+          0,
+          1329,
+          208,
+          0,
+          208
+        ],
+        "Keyframes": {
+          "0": [],
+          "1": [],
+          "2": [],
+          "3": [
+            4,
+            10,
+            17,
+            21
+          ],
+          "4": [],
+          "5": [],
+          "6": [],
+          "7": []
+        },
+        "KeyframeValues": {
+          "0": {},
+          "1": {},
+          "2": {},
+          "3": {
+            "4": [
+              0,
+              100
+            ],
+            "10": [
+              100,
+              100
+            ],
+            "17": [
+              100,
+              100
+            ],
+            "21": [
+              0,
+              100
+            ]
+          },
+          "4": {},
+          "5": {},
+          "6": {},
+          "7": {}
+        }
+      }
+    ]
+  }
+}
