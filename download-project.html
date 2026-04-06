@@ -75,17 +75,21 @@ a:hover { text-decoration: underline; }
 
   var url = 'https://raw.githubusercontent.com/admindjsoft/djhtml-releases/main/projects/' + encodeURIComponent(file);
 
-  // Verify the file exists, then trigger download
-  fetch(url, { method: 'HEAD' })
+  // Fetch the file as a blob so we can force a download without navigating away
+  fetch(url)
     .then(function(response) {
       if (!response.ok) throw new Error('Not found');
-      // File exists — trigger download
+      return response.blob();
+    })
+    .then(function(blob) {
+      var blobUrl = URL.createObjectURL(blob);
       var a = document.createElement('a');
-      a.href = url;
+      a.href = blobUrl;
       a.download = file;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
+      URL.revokeObjectURL(blobUrl);
       document.getElementById('loading').classList.add('hidden');
       document.getElementById('success').classList.remove('hidden');
     })
