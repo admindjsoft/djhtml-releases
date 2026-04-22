@@ -2055,6 +2055,555 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CASE STUDY — LIVE BROADCAST SHOWCASE
+   ═══════════════════════════════════════════════════════════════ */
+.case-hero {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto 56px;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 21 / 9;
+  background: #000;
+}
+
+.case-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+}
+
+.case-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(8,8,12,0.2) 0%, rgba(8,8,12,0.75) 60%, rgba(8,8,12,0.95) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 40px 48px;
+}
+
+.case-live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px 6px 10px;
+  border-radius: 100px;
+  background: rgba(255, 59, 95, 0.15);
+  border: 1px solid rgba(255, 59, 95, 0.35);
+  width: fit-content;
+  margin-bottom: 16px;
+}
+
+.case-live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff3b5f;
+  animation: pulse-live 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(255,59,95,0.5); }
+  50% { opacity: 0.7; box-shadow: 0 0 0 8px rgba(255,59,95,0); }
+}
+
+.case-live-text {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ff6b87;
+  text-transform: uppercase;
+}
+
+.case-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(24px, 3.2vw, 38px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  max-width: 720px;
+  margin-bottom: 10px;
+}
+
+.case-hero-sub {
+  font-size: 15px;
+  color: var(--text-secondary);
+  max-width: 620px;
+  line-height: 1.5;
+}
+
+.case-info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.case-info-item {
+  padding: 22px 20px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.case-info-icon {
+  color: var(--accent);
+  width: 18px;
+  height: 18px;
+  margin-bottom: 2px;
+  opacity: 0.9;
+}
+
+.case-info-label {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.case-info-value {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.case-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 64px;
+}
+
+.case-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.case-stat::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--gradient-main);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.case-stat:hover {
+  border-color: var(--border-light);
+  background: var(--bg-card-hover);
+  transform: translateY(-2px);
+}
+
+.case-stat:hover::before { opacity: 1; }
+
+.case-stat-value {
+  font-family: var(--font-display);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.case-stat-label {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.case-gallery-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.case-gallery-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.case-gallery-hint {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.case-gallery-hint svg {
+  width: 14px;
+  height: 14px;
+  color: var(--accent);
+}
+
+.case-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 72px;
+}
+
+.case-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: var(--transition);
+  position: relative;
+}
+
+.case-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--gradient-main);
+  opacity: 0;
+  transition: var(--transition);
+  z-index: 2;
+}
+
+.case-card:hover {
+  transform: translateY(-3px);
+  background: var(--bg-card-hover);
+  border-color: var(--border-light);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.case-card:hover::after { opacity: 1; }
+
+.case-card-media {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.case-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.case-card:hover .case-card-media img {
+  transform: scale(1.04);
+}
+
+.case-card-zoom {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(8,8,12,0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: var(--transition);
+}
+
+.case-card:hover .case-card-zoom {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.case-card-zoom svg { width: 16px; height: 16px; }
+
+.case-card-body {
+  padding: 18px 20px 22px;
+}
+
+.case-card-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.15);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.case-card-title {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.case-card-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* Workflow pipeline */
+.case-workflow {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.case-workflow::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--gradient-full);
+}
+
+.case-workflow-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.case-workflow-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.case-workflow-label::before { content: '// '; opacity: 0.5; }
+
+.case-workflow-headline {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.case-pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  position: relative;
+}
+
+.case-pipeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0,212,255,0.3), rgba(123,97,255,0.3), rgba(255,107,157,0.3), transparent);
+}
+
+.case-pipeline-step {
+  text-align: center;
+  position: relative;
+}
+
+.case-pipeline-number {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+}
+
+.case-pipeline-step:hover .case-pipeline-number {
+  border-color: rgba(0,212,255,0.4);
+  box-shadow: 0 0 24px rgba(0,212,255,0.15);
+  background: rgba(0,212,255,0.05);
+}
+
+.case-pipeline-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+}
+
+.case-pipeline-desc {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 230px;
+  margin: 0 auto;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 8, 0.94);
+  backdrop-filter: blur(24px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: lightboxFade 0.25s ease;
+}
+
+.lightbox.active { display: flex; }
+
+@keyframes lightboxFade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-content {
+  max-width: 92vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  animation: lightboxZoom 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes lightboxZoom {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.6), 0 0 120px rgba(0, 212, 255, 0.08);
+}
+
+.lightbox-caption {
+  color: var(--text-primary);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.lightbox-counter {
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.lightbox-close,
+.lightbox-nav {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+  background: rgba(0, 212, 255, 0.15);
+  border-color: rgba(0, 212, 255, 0.3);
+  color: var(--accent);
+}
+
+.lightbox-close { top: 30px; right: 30px; }
+.lightbox-prev { left: 30px; top: 50%; transform: translateY(-50%); }
+.lightbox-next { right: 30px; top: 50%; transform: translateY(-50%); }
+
+/* Case study responsive */
+@media (max-width: 1024px) {
+  .case-info { grid-template-columns: repeat(2, 1fr) !important; }
+  .case-stats { grid-template-columns: repeat(2, 1fr) !important; }
+  .case-gallery { grid-template-columns: repeat(2, 1fr) !important; }
+  .case-pipeline { grid-template-columns: repeat(2, 1fr) !important; gap: 32px 20px !important; }
+  .case-pipeline::before { display: none; }
+  .case-hero { aspect-ratio: 16 / 9 !important; }
+}
+
+@media (max-width: 768px) {
+  .case-hero { aspect-ratio: 4 / 3 !important; margin-bottom: 32px !important; }
+  .case-hero-overlay { padding: 24px 20px !important; }
+  .case-info { grid-template-columns: 1fr !important; }
+  .case-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 12px !important; }
+  .case-stat { padding: 20px 12px !important; }
+  .case-stat-value { font-size: 30px !important; }
+  .case-gallery { grid-template-columns: 1fr !important; }
+  .case-pipeline { grid-template-columns: 1fr !important; }
+  .case-workflow { padding: 28px 20px !important; }
+  .lightbox { padding: 16px !important; }
+  .lightbox-close { top: 14px !important; right: 14px !important; width: 40px !important; height: 40px !important; }
+  .lightbox-nav { width: 40px !important; height: 40px !important; }
+  .lightbox-prev { left: 14px !important; }
+  .lightbox-next { right: 14px !important; }
+  .lightbox-content img { max-height: 70vh !important; }
+}
 </style>
 <!-- Paddle.js Checkout -->
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
@@ -2083,6 +2632,7 @@ body {
   <ul class="nav-links">
     <li><a href="#features">Features</a></li>
     <li><a href="#projects">Projects</a></li>
+    <li><a href="#showcase">Showcase</a></li>
     <li><a href="#workflow">How It Works</a></li>
     <li><a href="#tutorials">Documentation</a></li>
     <li><a href="#pricing">Pricing</a></li>
@@ -2283,7 +2833,7 @@ body {
 
     <div class="projects-grid stagger reveal">
       <div class="project-card">
-        <a href="https://youtu.be/01WTOwgxiJg" target="_blank" rel="noopener" class="project-thumbnail">
+        <a href="https://youtu.be/BGY_Q04ysa0" target="_blank" rel="noopener" class="project-thumbnail">
           <img src="https://img.youtube.com/vi/BGY_Q04ysa0/maxresdefault.jpg" alt="Basic Lower Third tutorial" loading="lazy">
           <div class="project-play-btn">
             <svg viewBox="0 0 24 24"><polygon points="6,3 20,12 6,21"/></svg>
@@ -2327,6 +2877,270 @@ body {
     </div>
   </div>
 </section>
+
+<!-- ═══════════════ CASE STUDY / SHOWCASE ═══════════════ -->
+<section class="section" id="showcase">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">On Air</div>
+      <h2 class="section-title">Case Study —<br>ABA League Junior Finals 2026</h2>
+      <p class="section-desc">A selection of broadcast graphic templates built in DJ HTML Creator from the production team's design package, delivered live on air across three tournament days through a custom-built control application driving a CasparCG server.</p>
+    </div>
+
+    <div class="case-hero reveal">
+      <img src="assets/showcase/match-id.png" alt="ABA League Junior Finals broadcast graphic" loading="lazy">
+      <div class="case-hero-overlay">
+        <div class="case-live-badge">
+          <div class="case-live-dot"></div>
+          <span class="case-live-text">Live Broadcast</span>
+        </div>
+        <h3 class="case-hero-title">Quarter-finals to Final,<br>Aleksandar Nikolić Hall · Belgrade</h3>
+        <p class="case-hero-sub">Every graphic you see was designed by the production team, templated in DJ HTML Creator, and played to air through a custom-built control application driving a CasparCG server.</p>
+      </div>
+    </div>
+
+    <div class="case-info reveal">
+      <div class="case-info-item">
+        <svg class="case-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+        <div class="case-info-label">Event</div>
+        <div class="case-info-value">ABA League Junior<br>Final Tournament</div>
+      </div>
+      <div class="case-info-item">
+        <svg class="case-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div class="case-info-label">Venue</div>
+        <div class="case-info-value">Aleksandar Nikolić Hall<br>Belgrade, Serbia</div>
+      </div>
+      <div class="case-info-item">
+        <svg class="case-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <div class="case-info-label">Dates</div>
+        <div class="case-info-value">April 21 – 23, 2026<br>Three-day tournament</div>
+      </div>
+      <div class="case-info-item">
+        <svg class="case-info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23,7 16,12 23,17"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+        <div class="case-info-label">Delivery</div>
+        <div class="case-info-value">CasparCG Playout<br>Live TV Broadcast</div>
+      </div>
+    </div>
+
+    <div class="case-stats stagger reveal">
+      <div class="case-stat">
+        <div class="case-stat-value">10+</div>
+        <div class="case-stat-label">Featured Templates</div>
+      </div>
+      <div class="case-stat">
+        <div class="case-stat-value">3</div>
+        <div class="case-stat-label">Days On Air</div>
+      </div>
+      <div class="case-stat">
+        <div class="case-stat-value">100%</div>
+        <div class="case-stat-label">HTML / CasparCG</div>
+      </div>
+      <div class="case-stat">
+        <div class="case-stat-value">Live</div>
+        <div class="case-stat-label">Real-time Updates</div>
+      </div>
+    </div>
+
+    <div class="case-gallery-header reveal">
+      <div class="case-gallery-title">Graphic Package</div>
+      <div class="case-gallery-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+        Click any graphic to view full-screen
+      </div>
+    </div>
+
+    <div class="case-gallery stagger reveal">
+      <figure class="case-card" onclick="openLightbox(0)">
+        <div class="case-card-media">
+          <img src="assets/showcase/match-id.png" alt="Match ID card — pre-match intro" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Pre-match</span>
+          <div class="case-card-title">Match ID</div>
+          <div class="case-card-desc">Opening card with competition, venue, date, and team badges introducing each matchup.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(1)">
+        <div class="case-card-media">
+          <img src="assets/showcase/matchups.png" alt="Tournament bracket" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Bracket</span>
+          <div class="case-card-title">Tournament Bracket</div>
+          <div class="case-card-desc">Full bracket from quarter-finals through to the final, with pairings, tip-off times, and seedings.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(2)">
+        <div class="case-card-media">
+          <img src="assets/showcase/referees.png" alt="Referees" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Officials</span>
+          <div class="case-card-title">Referees</div>
+          <div class="case-card-desc">Officiating crew introduction with headshots and names shown before tip-off.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(3)">
+        <div class="case-card-media">
+          <img src="assets/showcase/roster.png" alt="Team roster" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Lineup</span>
+          <div class="case-card-title">Roster</div>
+          <div class="case-card-desc">Full twelve-player squad with jersey numbers and surnames, paged for readability.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(4)">
+        <div class="case-card-media">
+          <img src="assets/showcase/starting-five.png" alt="Starting five" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Tip-off</span>
+          <div class="case-card-title">Starting Five</div>
+          <div class="case-card-desc">Five players taking the floor, shown side by side moments before tip-off.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(5)">
+        <div class="case-card-media">
+          <img src="assets/showcase/score-bug.png" alt="Score bug" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">In-game</span>
+          <div class="case-card-title">Score Bug</div>
+          <div class="case-card-desc">Persistent bottom-of-screen score with period indicator and live game clock.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(6)">
+        <div class="case-card-media">
+          <img src="assets/showcase/scoreboard.png" alt="Quarter break scoreboard" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Break</span>
+          <div class="case-card-title">Quarter Break Scoreboard</div>
+          <div class="case-card-desc">Full-width card recapping the score between periods with team badges prominently shown.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(7)">
+        <div class="case-card-media">
+          <img src="assets/showcase/timeout.png" alt="Timeout indicator" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Event</span>
+          <div class="case-card-title">Timeout</div>
+          <div class="case-card-desc">Timeout notification with team in possession and countdown during the play stoppage.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(8)">
+        <div class="case-card-media">
+          <img src="assets/showcase/statistics.png" alt="Team statistics" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Stats</span>
+          <div class="case-card-title">Team Statistics</div>
+          <div class="case-card-desc">Side-by-side team comparison across free throws, field goals, rebounds, assists, and fouls.</div>
+        </figcaption>
+      </figure>
+
+      <figure class="case-card" onclick="openLightbox(9)">
+        <div class="case-card-media">
+          <img src="assets/showcase/game-leaders.png" alt="Game leaders" loading="lazy">
+          <div class="case-card-zoom">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M14 10l7-7M9 21H3v-6M10 14l-7 7"/></svg>
+          </div>
+        </div>
+        <figcaption class="case-card-body">
+          <span class="case-card-tag">Stats</span>
+          <div class="case-card-title">Game Leaders</div>
+          <div class="case-card-desc">Top performers of the game in points, rebounds, and assists with player photos.</div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="case-workflow reveal">
+      <div class="case-workflow-header">
+        <div class="case-workflow-label">Pipeline</div>
+        <div class="case-workflow-headline">From design package to live on-air playout</div>
+      </div>
+      <div class="case-pipeline">
+        <div class="case-pipeline-step">
+          <div class="case-pipeline-number">01</div>
+          <div class="case-pipeline-title">Design Package</div>
+          <div class="case-pipeline-desc">Finished broadcast graphic designs provided by the production team.</div>
+        </div>
+        <div class="case-pipeline-step">
+          <div class="case-pipeline-number">02</div>
+          <div class="case-pipeline-title">Templates Built</div>
+          <div class="case-pipeline-desc">Each design turned into an animated HTML template in DJ HTML Creator, with data-bound fields for every dynamic element.</div>
+        </div>
+        <div class="case-pipeline-step">
+          <div class="case-pipeline-number">03</div>
+          <div class="case-pipeline-title">Custom Control App</div>
+          <div class="case-pipeline-desc">A purpose-built playout application drives the templates and pushes live updates to the CasparCG server.</div>
+        </div>
+        <div class="case-pipeline-step">
+          <div class="case-pipeline-number">04</div>
+          <div class="case-pipeline-title">On-Air</div>
+          <div class="case-pipeline-desc">Graphics play out live during the tournament broadcast, updated in real time by the operator.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" aria-label="Close" onclick="closeLightbox(event, true)">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-prev" aria-label="Previous" onclick="lightboxNav(-1, event)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button class="lightbox-nav lightbox-next" aria-label="Next" onclick="lightboxNav(1, event)">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <div class="lightbox-content" onclick="event.stopPropagation()">
+    <img id="lightbox-img" src="" alt="">
+    <div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+      <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
+</div>
 
 <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
 <section class="section" id="workflow" style="background: var(--bg-secondary);">
@@ -2876,6 +3690,53 @@ fetch('https://api.github.com/repos/admindjsoft/djhtml-releases/releases/latest'
     if (verEl) verEl.textContent = 'v1.0';
     if (sizeEl) sizeEl.textContent = '~45 MB';
   });
+
+// ═══════════════ CASE STUDY LIGHTBOX ═══════════════
+const CASE_IMAGES = [
+  { src: 'assets/showcase/match-id.png',      caption: 'Match ID — Pre-match Intro' },
+  { src: 'assets/showcase/matchups.png',      caption: 'Tournament Bracket' },
+  { src: 'assets/showcase/referees.png',      caption: 'Referees' },
+  { src: 'assets/showcase/roster.png',        caption: 'Roster' },
+  { src: 'assets/showcase/starting-five.png', caption: 'Starting Five' },
+  { src: 'assets/showcase/score-bug.png',     caption: 'In-game Score Bug' },
+  { src: 'assets/showcase/scoreboard.png',    caption: 'Quarter Break Scoreboard' },
+  { src: 'assets/showcase/timeout.png',       caption: 'Timeout' },
+  { src: 'assets/showcase/statistics.png',    caption: 'Team Statistics' },
+  { src: 'assets/showcase/game-leaders.png',  caption: 'Game Leaders' },
+];
+let lightboxIdx = 0;
+
+function openLightbox(idx) {
+  lightboxIdx = idx;
+  const item = CASE_IMAGES[idx];
+  document.getElementById('lightbox-img').src = item.src;
+  document.getElementById('lightbox-img').alt = item.caption;
+  document.getElementById('lightbox-caption').textContent = item.caption;
+  document.getElementById('lightbox-counter').textContent = (idx + 1) + ' / ' + CASE_IMAGES.length;
+  document.getElementById('lightbox').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e, force) {
+  if (force || !e || e.target.id === 'lightbox') {
+    document.getElementById('lightbox').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function lightboxNav(dir, e) {
+  if (e) e.stopPropagation();
+  lightboxIdx = (lightboxIdx + dir + CASE_IMAGES.length) % CASE_IMAGES.length;
+  openLightbox(lightboxIdx);
+}
+
+document.addEventListener('keydown', (e) => {
+  const lb = document.getElementById('lightbox');
+  if (!lb || !lb.classList.contains('active')) return;
+  if (e.key === 'Escape') closeLightbox(null, true);
+  else if (e.key === 'ArrowLeft') lightboxNav(-1);
+  else if (e.key === 'ArrowRight') lightboxNav(1);
+});
 </script>
 
 </body>
