@@ -1,0 +1,30 @@
+# Changelog
+
+## v1.5.1 — 2026-05-02
+
+- **Import HTML** — open an existing HTML template back as a fully editable project
+  (**Import → Import HTML…**). Compositions, layers, text, image loaders, image
+  sequences, fonts, masks, transitions, effects and animation are all reconstructed.
+- **Round-trip your own exports** — HTML files exported from DJ HTML Creator
+  re-import losslessly, with embedded image sequences and fonts extracted to disk
+  alongside the new project file.
+- **Cross-tool import** — HTML templates produced by other broadcast template tools
+  are auto-detected and converted into native DJ HTML Creator projects, so you can
+  edit them just like a project you created from scratch.
+
+## v1.5.0 — 2026-05-01
+
+- **Exports up to 8× smaller** — HTML templates now use WebP instead of PNG by default.
+  Same visual quality, dramatically smaller files (e.g. 78 MB → ~12 MB on a 1080p video clip).
+- **Exports 6–8× faster** — frame encoding runs in parallel, with up to 8 ffmpeg
+  workers instead of one at a time.
+- **New Export Settings dialog** (Settings menu) — pick the format (WebP / PNG) and
+  quality (Lossless, Q95, Q90, Q85, Q80, Q75). Default is WebP Q90 — visually
+  identical to PNG.
+- **Works for everything you import** — PNG, JPG, BMP, TGA, PSD, plus all video
+  formats (MP4, MOV/ProRes, AVI, MKV, WebM). All converted to WebP automatically
+  when WebP is selected.
+- **Works in every HTML export** — CasparCG, SPX, OBS, vMix, OGraf, and single-frame
+  HTML.
+- Cache menu renamed to Settings.
+- Lottie export still uses PNG for mobile player compatibility.
