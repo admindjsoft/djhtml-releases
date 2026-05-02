@@ -2550,7 +2550,8 @@ body {
 }
 
 .lightbox-close,
-.lightbox-nav {
+.lightbox-nav,
+.changelog-close {
   position: absolute;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -2567,7 +2568,8 @@ body {
 }
 
 .lightbox-close:hover,
-.lightbox-nav:hover {
+.lightbox-nav:hover,
+.changelog-close:hover {
   background: rgba(0, 212, 255, 0.15);
   border-color: rgba(0, 212, 255, 0.3);
   color: var(--accent);
@@ -2604,6 +2606,156 @@ body {
   .lightbox-next { right: 14px !important; }
   .lightbox-content img { max-height: 70vh !important; }
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   CHANGELOG MODAL
+   ═══════════════════════════════════════════════════════════════ */
+.changelog-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 4, 8, 0.94);
+  backdrop-filter: blur(24px);
+  z-index: 10000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  animation: lightboxFade 0.25s ease;
+}
+.changelog-modal.active { display: flex; }
+
+.changelog-card {
+  position: relative;
+  max-width: 760px;
+  width: 100%;
+  max-height: 86vh;
+  background: linear-gradient(180deg, var(--bg-card), var(--bg-secondary));
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 80px rgba(0,0,0,0.6), 0 0 120px rgba(0, 212, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  animation: lightboxZoom 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.changelog-header {
+  padding: 26px 32px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.changelog-header h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+}
+.changelog-header .changelog-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: var(--gradient-main);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  color: #08080c;
+}
+
+.changelog-body {
+  padding: 22px 32px 28px;
+  overflow-y: auto;
+  flex: 1;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-light) transparent;
+}
+.changelog-body::-webkit-scrollbar { width: 8px; }
+.changelog-body::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 8px; }
+
+.changelog-version {
+  margin: 28px 0 8px;
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.changelog-version:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+}
+.changelog-version .changelog-tag {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--accent-glow);
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 212, 255, 0.25);
+}
+.changelog-version .changelog-date {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.changelog-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.changelog-body li {
+  position: relative;
+  padding: 10px 0 10px 22px;
+  color: var(--text-secondary);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+.changelog-body li::before {
+  content: '';
+  position: absolute;
+  left: 4px; top: 18px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+}
+.changelog-body li b,
+.changelog-body li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.changelog-close { top: 16px; right: 16px; }
+
+.changelog-loading,
+.changelog-error {
+  padding: 40px 0;
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.changelog-error a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .changelog-modal { padding: 14px !important; }
+  .changelog-header { padding: 20px 22px 14px !important; }
+  .changelog-header h2 { font-size: 19px !important; }
+  .changelog-body { padding: 18px 22px 22px !important; }
+  .changelog-close { top: 12px !important; right: 12px !important; width: 38px !important; height: 38px !important; }
+}
 </style>
 <!-- Paddle.js Checkout -->
 <script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
@@ -2636,6 +2788,7 @@ body {
     <li><a href="#workflow">How It Works</a></li>
     <li><a href="#tutorials">Documentation</a></li>
     <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#" onclick="openChangelog(event)">Changelog</a></li>
     <li><a href="#download">Download</a></li>
   </ul>
   <div class="nav-cta">
@@ -3133,6 +3286,24 @@ body {
     <div>
       <div class="lightbox-caption" id="lightbox-caption"></div>
       <div class="lightbox-counter" id="lightbox-counter"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Changelog Modal -->
+<div class="changelog-modal" id="changelog-modal" onclick="closeChangelog(event)">
+  <div class="changelog-card" onclick="event.stopPropagation()">
+    <button class="changelog-close" aria-label="Close" onclick="closeChangelog(event, true)">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="changelog-header">
+      <div class="changelog-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      </div>
+      <h2>Changelog</h2>
+    </div>
+    <div class="changelog-body" id="changelog-body">
+      <div class="changelog-loading">Loading…</div>
     </div>
   </div>
 </div>
@@ -3732,6 +3903,98 @@ document.addEventListener('keydown', (e) => {
   else if (e.key === 'ArrowLeft') lightboxNav(-1);
   else if (e.key === 'ArrowRight') lightboxNav(1);
 });
+
+// ─── Changelog modal ───
+// Loads CHANGELOG.md live from the GitHub releases repo and renders it.
+const CHANGELOG_URL = 'https://raw.githubusercontent.com/admindjsoft/djhtml-releases/main/CHANGELOG.md';
+let changelogLoaded = false;
+
+function openChangelog(e) {
+  if (e) e.preventDefault();
+  document.getElementById('changelog-modal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  // Close mobile nav if open
+  const nav = document.querySelector('.nav-links');
+  if (nav) nav.classList.remove('show');
+  if (!changelogLoaded) loadChangelog();
+}
+function closeChangelog(e, force) {
+  if (force || !e || e.target.id === 'changelog-modal') {
+    document.getElementById('changelog-modal').classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', (e) => {
+  const cm = document.getElementById('changelog-modal');
+  if (cm && cm.classList.contains('active') && e.key === 'Escape') closeChangelog(null, true);
+});
+
+function loadChangelog() {
+  const body = document.getElementById('changelog-body');
+  body.innerHTML = '<div class="changelog-loading">Loading…</div>';
+  // Cache-bust so updates show without a hard reload
+  fetch(CHANGELOG_URL + '?t=' + Date.now())
+    .then(r => r.ok ? r.text() : Promise.reject(r.status))
+    .then(md => {
+      body.innerHTML = renderChangelog(md);
+      changelogLoaded = true;
+    })
+    .catch(err => {
+      body.innerHTML =
+        '<div class="changelog-error">Couldn’t load the changelog.<br>' +
+        'View it on <a href="https://github.com/admindjsoft/djhtml-releases/blob/main/CHANGELOG.md" target="_blank" rel="noopener">GitHub</a> instead.</div>';
+    });
+}
+
+// Tiny markdown renderer purpose-built for our CHANGELOG.md format:
+//   `## v1.5.1 — 2026-05-02`  → version header with tag + date
+//   `- **Bold** — text`        → list item with bold leading phrase
+// Anything else is dropped (top `# Changelog` heading, blank lines, etc.).
+function renderChangelog(md) {
+  const lines = md.split(/\r?\n/);
+  let html = '';
+  let inList = false;
+  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line) { closeList(); continue; }
+
+    // Skip top-level "# Changelog" heading
+    if (/^#\s/.test(line) && !/^##/.test(line)) continue;
+
+    // Version heading: "## v1.5.1 — 2026-05-02"  (em-dash or regular hyphen tolerated)
+    const ver = line.match(/^##\s+(v[\w.\-]+)\s*[—\-]\s*(.+)$/);
+    if (ver) {
+      closeList();
+      html +=
+        '<div class="changelog-version">' +
+          '<span class="changelog-tag">' + escapeHtml(ver[1]) + '</span>' +
+          '<span class="changelog-date">' + escapeHtml(ver[2].trim()) + '</span>' +
+        '</div>';
+      continue;
+    }
+
+    // Bullet list item
+    if (/^[-*]\s+/.test(line)) {
+      if (!inList) { html += '<ul>'; inList = true; }
+      html += '<li>' + inlineMd(line.replace(/^[-*]\s+/, '')) + '</li>';
+      continue;
+    }
+  }
+  closeList();
+  return html || '<div class="changelog-error">Changelog is empty.</div>';
+}
+
+function inlineMd(s) {
+  // Escape first, then re-introduce **bold** markup.
+  return escapeHtml(s)
+    .replace(/\*\*([^*]+)\*\*/g, '<b>$1</b>')
+    .replace(/`([^`]+)`/g, '<code>$1</code>');
+}
+function escapeHtml(s) {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
 </script>
 
 </body>
