@@ -12,10 +12,10 @@
   PNG / JPEG / TGA image sequences. In-app preview and `.htmc` project files
   stay clean. Activate a license to remove the watermark.
 - **Existing trial users — your trial is back.** If your 7-day trial had already
-  expired, the new version reopens the app in unlimited trial mode automatically;
-  no reinstall, no re-download.
+  expired, install v1.5.2 over your existing version and the app reopens in
+  unlimited trial mode automatically. Your projects and settings are kept.
 - **Lapsed subscriptions no longer block the app.** If your monthly/annual
-  subscription expires, you keep using the app — HTML exports just get the trial
+  subscription expires, you keep using the app — exports just get the trial
   watermark until you renew. Previously the app refused to start.
 
 ## v1.5.1 — 2026-05-02
