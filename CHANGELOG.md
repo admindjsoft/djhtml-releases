@@ -6,10 +6,11 @@
   run out after 7 days and capped you at 30 frames, 2 compositions, and 30
   characters of crawl text. All of those limits are gone — the trial gives you
   the full app, indefinitely.
-- **Watermark on HTML export only.** The trade-off: HTML files exported in trial
-  mode show a small "DJ HTML Creator — Trial" badge in the bottom-right corner.
-  In-app preview, HTMC project files, and image-sequence exports stay clean.
-  Activate a license to remove the watermark from HTML exports.
+- **Watermark on exports.** The trade-off: files exported in trial mode show a
+  small "DJ HTML Creator — Trial" badge in the bottom-right corner. Applies to
+  HTML (CasparCG / OBS / vMix / SPX / OGraf), Lottie JSON, MP4 / MOV video, and
+  PNG / JPEG / TGA image sequences. In-app preview and `.htmc` project files
+  stay clean. Activate a license to remove the watermark.
 - **Existing trial users — your trial is back.** If your 7-day trial had already
   expired, the new version reopens the app in unlimited trial mode automatically;
   no reinstall, no re-download.
