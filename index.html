@@ -4115,7 +4115,15 @@ function renderChangelog(md) {
   const lines = md.split(/\r?\n/);
   let html = '';
   let inList = false;
-  const closeList = () => { if (inList) { html += '</ul>'; inList = false; } };
+  let openItem = null;          // accumulated content of the current <li>, or null
+
+  const flushItem = () => {
+    if (openItem !== null) { html += '<li>' + openItem + '</li>'; openItem = null; }
+  };
+  const closeList = () => {
+    flushItem();
+    if (inList) { html += '</ul>'; inList = false; }
+  };
 
   for (const raw of lines) {
     const line = raw.trim();
@@ -4136,10 +4144,18 @@ function renderChangelog(md) {
       continue;
     }
 
-    // Bullet list item
+    // New bullet list item
     if (/^[-*]\s+/.test(line)) {
+      flushItem();
       if (!inList) { html += '<ul>'; inList = true; }
-      html += '<li>' + inlineMd(line.replace(/^[-*]\s+/, '')) + '</li>';
+      openItem = inlineMd(line.replace(/^[-*]\s+/, ''));
+      continue;
+    }
+
+    // Continuation line of the current bullet (multi-line markdown lists indent
+    // wrap text under the bullet). Append with a single space.
+    if (openItem !== null) {
+      openItem += ' ' + inlineMd(line);
       continue;
     }
   }
