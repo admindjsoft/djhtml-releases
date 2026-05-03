@@ -1,5 +1,22 @@
 # Changelog
 
+## v1.5.2 — 2026-05-03
+
+- **New trial model — no time limit, no feature limits.** The free trial used to
+  run out after 7 days and capped you at 30 frames, 2 compositions, and 30
+  characters of crawl text. All of those limits are gone — the trial gives you
+  the full app, indefinitely.
+- **Watermark on HTML export only.** The trade-off: HTML files exported in trial
+  mode show a small "DJ HTML Creator — Trial" badge in the bottom-right corner.
+  In-app preview, HTMC project files, and image-sequence exports stay clean.
+  Activate a license to remove the watermark from HTML exports.
+- **Existing trial users — your trial is back.** If your 7-day trial had already
+  expired, the new version reopens the app in unlimited trial mode automatically;
+  no reinstall, no re-download.
+- **Lapsed subscriptions no longer block the app.** If your monthly/annual
+  subscription expires, you keep using the app — HTML exports just get the trial
+  watermark until you renew. Previously the app refused to start.
+
 ## v1.5.1 — 2026-05-02
 
 - **Import HTML** — open an existing HTML template back as a fully editable project
