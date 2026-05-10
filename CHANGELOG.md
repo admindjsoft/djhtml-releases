@@ -1,5 +1,43 @@
 # Changelog
 
+## v1.5.3 — 2026-05-10
+
+- **Multi-stop markers — pause and continue through several scripted poses.**
+  Set any number of stop markers along a composition's timeline. Play stops at
+  the first marker; CasparCG `CG NEXT` (vMix Continue / OBS continue / OGraf
+  step) advances pause-to-pause; the final `STOP` triggers the outro from
+  whatever pose is on screen at that moment. Drag markers on the ruler to
+  retime, right-click to remove. Existing single-stop projects keep working
+  unchanged.
+- **Next button in HTML Preview.** Test the multi-stop flow without leaving
+  the app — the new ⏭ Next button in the HTML Preview window calls
+  `window.next()`, the same function CasparCG/vMix/OBS call when an operator
+  hits NEXT.
+- **Jump to start / end buttons in the playback toolbar.** ⏮ jumps the
+  playhead to frame 0, ⏭ jumps it to the last frame.
+- **Tabular Nums now matches between WPF preview and HTML output.** Tabular
+  text (timers, scores, "168:12"-style strings) was rendering ~30 % wider in
+  HTML than in the editor because WPF's `FormattedText` API silently ignores
+  the OpenType `tnum` feature. The WPF preview now measures and renders digits
+  with the true tabular advance, so what you see in the editor matches what
+  CasparCG / OBS / vMix plays back. Toggling Tabular Nums in the inspector
+  also resizes the selection bounds and inline editor immediately.
+- **RotateSpin OUT transitions with negative rotation no longer collapse into
+  a crossfade.** Negative or overflow angles were being clamped to `[0, 360]`
+  partway through the transform pipeline, so the rotation reduced to zero and
+  the engine fell back to a fade. Negative spins now distribute correctly
+  across full turns and play the configured rotation.
+- **Special-character text fill (block/dash characters used as foul indicators,
+  battery bars, etc.) renders the configured gradient in HTML.** The gradient
+  was landing far enough off the actual glyph that the character read as
+  transparent and the dark layer underneath showed through. Position is also
+  no longer shifted a few pixels down on layers with very large `line-height`
+  relative to the font size.
+- **Gradient text fill survives a copy into a nested composition.** Pasting a
+  layer with a gradient into a nested comp used to drop the gradient settings
+  on the inner clip, so it rendered as a solid colour instead. The gradient
+  parameters now travel with the layer.
+
 ## v1.5.2 — 2026-05-03
 
 - **New trial model — no time limit, no feature limits.** The free trial used to
