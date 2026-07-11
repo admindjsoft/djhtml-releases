@@ -1,5 +1,67 @@
 # Changelog
 
+## v1.5.5 — 2026-07-11
+
+- **Use a layer as a mask (alpha matte).** Any graphic layer can now act as a
+  mask for another layer: select it, press **MASK** in the Inspector's
+  **Use as Mask** section and pick the target. The mask's real alpha does the
+  cutting — soft gradients give feathered edges — and an **Invert** toggle
+  flips the matte. The mask stays a normal layer ([MASK] badge, yellow shape
+  outline), so you move, scale and keyframe it with the standard gizmos.
+  Works identically in the editor preview, HTML export and nested compositions.
+- **Two-Part Text — one text row, two fonts, two data fields.** A text layer
+  can render as two inline runs on a shared baseline (e.g. first name regular +
+  surname bold), each with its own font, size, weight, style, color and its own
+  update key. Fit Width compresses the combined row as one text. Enable it with
+  the **Two-Part Text** checkbox in the text properties.
+- **Child Text Layer — attach & release.** Attach a text layer to a parent text
+  (**right-click → Child Of (text)**): while attached it inherits everything —
+  font, style, color, Fit Width compression — and always sits exactly one space
+  after the parent's text, while keeping its own update key. Right-click a
+  Position keyframe and choose **Release Child Here** to detach it mid-animation;
+  the handoff is seamless for any typed text length, so two dynamic words can
+  enter as one row and then split into stacked lines.
+- **Dynamic Anchor (X) — Pin Right Edge & Follow for dynamic text.** Tag a
+  Position keyframe (**right-click → Dynamic Anchor (X)**) to pin a text's
+  right edge at its authored position, or to make it follow the end of another
+  text, regardless of how long the typed content is at runtime. The correction
+  blends in along the tagged move with its easing; tagged keyframes show an
+  orange outline in the timeline. Perfect for aligning mixed left/right-aligned
+  dynamic texts on a shared vertical guideline.
+- **Video Loader — runtime video container.** The video counterpart of the
+  Image Loader: drag a container with the new toolbar tool and the playout
+  system fills it with a video URL at runtime (autoplay, loop, muted). Same fit
+  modes as the Image Loader. For CasparCG use WebM (VP9) with alpha — it plays
+  natively in the built-in browser, transparency included.
+- **Faster HTML preview and export.** WebP encoding uses a faster compression
+  profile, and previews render with a lighter quality cap — noticeably shorter
+  export and preview times with no visible quality change in broadcast use.
+- **Export fixes for nested compositions.** Baked nested layers that sit above
+  an image loader / text / shape inside a nested composition now keep the
+  correct stacking order in the CasparCG export at every nesting depth; photos
+  with EXIF rotation no longer appear rotated in the HTML preview.
+- **A lot of under-the-hood improvements** to rendering, performance, and the
+  export pipelines, plus bug fixes across the editor, preview, and export paths.
+
+## v1.5.4 — 2026-05-19
+
+- **New Roll layer — vertical scrolling text and image strip.** Add a credits-style
+  roll via **Layers → New Layer → New Roll Layer…** The dedicated editor lets you
+  type or paste multi-line text and drop inline images (logos, player photos)
+  between lines. Inspector controls cover speed (1–10, same scale as Crawl),
+  direction (Bottom → Top default, or Top → Bottom), and an optional Loop toggle
+  (off by default — the roll ends at the next stop marker). The whole roll wrap
+  is a regular layer, so it accepts the standard transform / scale / rotate /
+  animation pipeline.
+- **Stop marker inside the Roll editor.** Right-click any line in the editor
+  and choose **Add Stop Marker** to pause the roll when that line reaches the
+  vertical center of the composition. CasparCG `CG NEXT` (or the matching
+  playout trigger) resumes the scroll — useful for revealing a headline,
+  winner, or sponsor card mid-roll.
+- **A lot of under-the-hood improvements** to rendering, performance, and the
+  HTML / Lottie export pipelines.
+- **A lot of bug fixes** across the editor, preview, and export paths.
+
 ## v1.5.3 — 2026-05-10
 
 - **Multi-stop markers — pause and continue through several scripted poses.**
