@@ -1,5 +1,29 @@
 # Changelog
 
+## v1.5.6 — 2026-07-13
+
+- **Smart video memory — decode on demand.** Importing a
+  video no longer loads the whole file into RAM up front; frames are decoded as
+  you scrub or play, and a green **ready-for-playback** bar on the timeline ruler
+  shows the cached range. A memory budget (**Settings → Memory**, adjustable with
+  the new Video cache slider) keeps RAM in check by releasing the oldest frames
+  once it fills up. Preview resolution is adaptive for smooth scrubbing —
+  **Full / Half / Quarter**, with a crisp re-render when you pause — and you can
+  pin it to Full whenever you want full quality at all times.
+- **Child Text Layer & Pin/Follow now work in nested compositions with dynamic
+  text.** A child text attached inside a nested composition and placed into a main
+  composition now shows correctly from the first frame — even when you change its
+  text at runtime (e.g. via CasparCG) — instead of staying hidden until the
+  release keyframe. **Pin Right Edge** and **Follow** keep the words aligned on the
+  shared guideline for any typed length, including while a Font Size animation is
+  running.
+- **Deleting an image or video now clears it from its container.** Removing an
+  image or video from the Project panel immediately empties any Image / Video
+  Loader that was using it — you no longer have to move the playhead for the
+  container to clear. Works for containers inside nested compositions too, and
+  Undo restores both the asset and the container assignment.
+- **More under-the-hood fixes** across the editor, preview, and export paths.
+
 ## v1.5.5 — 2026-07-11
 
 - **Use a layer as a mask (alpha matte).** Any graphic layer can now act as a
