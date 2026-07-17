@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.5.7 — 2026-07-17
+
+- **Smooth playback on CasparCG interlaced channels (1080i50/60).** Exported
+  templates now deliver a fresh frame to CasparCG for every field instead of
+  every other one, eliminating the judder that made animations stutter on
+  interlaced channels even though they looked smooth in Chrome and other
+  playout servers. The keep-alive mechanism costs nothing while a graphic is
+  holding still on screen.
+- **Decode-ahead for image-sequence layers.** Upcoming frames of embedded
+  image banks are decoded a few frames in advance, off the critical path —
+  heavy full-frame intros now play at full speed from the very first frame
+  instead of slowing down and stuttering while PNG frames decode. The
+  lookahead correctly follows loop restarts and clip cuts, and the small
+  frame cache is released as soon as the graphic leaves the screen.
+- **Clean playout logs.** Per-frame Dynamic Anchor (X) diagnostics are no
+  longer written to the CasparCG log during normal playback. For
+  troubleshooting, set `window._kfaDebug = 1` in the template's DevTools
+  console (CasparCG remote-debugging port) to turn them back on.
+
 ## v1.5.6 — 2026-07-13
 
 - **Smart video memory — decode on demand.** Importing a
