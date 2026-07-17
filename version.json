@@ -1,27 +1,22 @@
 {
-  "version": "1.5.6",
-  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.5.6/DJHTMLCreator_Setup_v1.5.6.exe",
-  "changelog": ## v1.5.6 — 2026-07-13
+  "version": "1.5.7",
+  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.5.7/DJHTMLCreator_Setup_v1.5.7.exe",
+  "changelog": ## v1.5.7 — 2026-07-17
 
-- **Smart video memory — decode on demand.** Importing a
-  video no longer loads the whole file into RAM up front; frames are decoded as
-  you scrub or play, and a green **ready-for-playback** bar on the timeline ruler
-  shows the cached range. A memory budget (**Settings → Memory**, adjustable with
-  the new Video cache slider) keeps RAM in check by releasing the oldest frames
-  once it fills up. Preview resolution is adaptive for smooth scrubbing —
-  **Full / Half / Quarter**, with a crisp re-render when you pause — and you can
-  pin it to Full whenever you want full quality at all times.
-- **Child Text Layer & Pin/Follow now work in nested compositions with dynamic
-  text.** A child text attached inside a nested composition and placed into a main
-  composition now shows correctly from the first frame — even when you change its
-  text at runtime (e.g. via CasparCG) — instead of staying hidden until the
-  release keyframe. **Pin Right Edge** and **Follow** keep the words aligned on the
-  shared guideline for any typed length, including while a Font Size animation is
-  running.
-- **Deleting an image or video now clears it from its container.** Removing an
-  image or video from the Project panel immediately empties any Image / Video
-  Loader that was using it — you no longer have to move the playhead for the
-  container to clear. Works for containers inside nested compositions too, and
-  Undo restores both the asset and the container assignment.
-- **More under-the-hood fixes** across the editor, preview, and export paths.
+- **Smooth playback on CasparCG interlaced channels (1080i50/60).** Exported
+  templates now deliver a fresh frame to CasparCG for every field instead of
+  every other one, eliminating the judder that made animations stutter on
+  interlaced channels even though they looked smooth in Chrome and other
+  playout servers. The keep-alive mechanism costs nothing while a graphic is
+  holding still on screen.
+- **Decode-ahead for image-sequence layers.** Upcoming frames of embedded
+  image banks are decoded a few frames in advance, off the critical path —
+  heavy full-frame intros now play at full speed from the very first frame
+  instead of slowing down and stuttering while PNG frames decode. The
+  lookahead correctly follows loop restarts and clip cuts, and the small
+  frame cache is released as soon as the graphic leaves the screen.
+- **Clean playout logs.** Per-frame Dynamic Anchor (X) diagnostics are no
+  longer written to the CasparCG log during normal playback. For
+  troubleshooting, set `window._kfaDebug = 1` in the template's DevTools
+  console (CasparCG remote-debugging port) to turn them back on.
 }
