@@ -1,5 +1,51 @@
 # Changelog
 
+## v1.5.8 — 2026-07-21
+
+- **Heavy 4K exports no longer freeze the computer.** Exporting a large,
+  multi-thousand-frame 4K project used to build every frame in RAM before
+  encoding — enough to exhaust system memory and lock up Windows. The export
+  now renders and encodes in small windows, so peak memory stays low no matter
+  how long the composition is. A pre-flight estimate warns you before an
+  export that looks too big to finish, and a memory watchdog stops the export
+  cleanly (instead of taking the whole machine down) if the system runs
+  critically low.
+- **Dramatically faster HTML export.** Compositions where many baked layers
+  repeat the same few images — nested comps, duplicated players, mostly-static
+  overlays — are detected and rendered once instead of thousands of times.
+  Templates that used to take tens of minutes now export in a fraction of the
+  time, with pixel-identical output.
+- **Rock-solid playback speed on every playout host.** Exported templates now
+  keep exact composition speed even when the host delivers frames slower than
+  the project's FPS (for example a 50 fps template on an interlaced CasparCG
+  channel, or a host running its browser at a lower tick rate). Animations that
+  looked like they were "not really running at 50 fps" — dragging or stuttering
+  — now play at the correct wall-clock speed by skipping intermediate frames
+  instead of slowing down, while stop poses and the outro are never skipped.
+- **NEXT reacts instantly, even mid-animation.** Pressing `CG NEXT` (vMix
+  Continue / OBS continue) while a sequence is still animating now jumps to the
+  upcoming stop and keeps playing straight toward the next one — no more
+  double-press and no waiting for the pose to settle first. On the last stop it
+  triggers the outro, exactly as before.
+- **On-screen playback diagnostics.** Add `?diag` to a template's URL, or send
+  `CG INVOKE diag`, to show a small HUD with the real refresh rate, painted
+  frames per second, timeline speed and current frame — a quick way to confirm
+  a playout host is actually feeding the template at full frame rate.
+- **Masks stay exactly where you put them.** Masks are now anchored in
+  composition space and move only through their own keyframes. Moving,
+  scaling, or retyping the layer under a mask — including dynamic text that
+  grows or shrinks and right-pinned names — no longer drags the mask off
+  position. The editor preview and the CasparCG export match by construction,
+  in nested compositions too. Existing projects are converted automatically on
+  first open.
+- **Import WebP images.** `.webp` files can now be imported into the Project
+  panel and used like any other still or sequence, including transparency.
+- **Editor fixes.** Font Size edits made on layers with keyframes no longer
+  revert when you move the playhead; stray "ghost" keyframe diamonds no longer
+  linger while dragging; and the timeline no longer jumps back to frame 0 when
+  you click another layer while zoomed in.
+- **More under-the-hood fixes** across the editor, preview, and export paths.
+
 ## v1.5.7 — 2026-07-17
 
 - **Smooth playback on CasparCG interlaced channels (1080i50/60).** Exported
