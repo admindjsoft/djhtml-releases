@@ -1,49 +1,112 @@
 {
-  "version": "1.5.8",
-  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.5.8/DJHTMLCreator_Setup_v1.5.8.exe",
-  "changelog": ## v1.5.8 — 2026-07-21
+  "version": "1.5.9",
+  "download_url": "https://github.com/admindjsoft/djhtml-releases/releases/download/v1.5.9/DJHTMLCreator_Setup_v1.5.9.exe",
+  "changelog": ## v1.5.9 — 2026-07-31
 
-- **Heavy 4K exports no longer freeze the computer.** Exporting a large,
-  multi-thousand-frame 4K project used to build every frame in RAM before
-  encoding — enough to exhaust system memory and lock up Windows. The export
-  now renders and encodes in small windows, so peak memory stays low no matter
-  how long the composition is. A pre-flight estimate warns you before an
-  export that looks too big to finish, and a memory watchdog stops the export
-  cleanly (instead of taking the whole machine down) if the system runs
-  critically low.
-- **Dramatically faster HTML export.** Compositions where many baked layers
-  repeat the same few images — nested comps, duplicated players, mostly-static
-  overlays — are detected and rendered once instead of thousands of times.
-  Templates that used to take tens of minutes now export in a fraction of the
-  time, with pixel-identical output.
-- **Rock-solid playback speed on every playout host.** Exported templates now
-  keep exact composition speed even when the host delivers frames slower than
-  the project's FPS (for example a 50 fps template on an interlaced CasparCG
-  channel, or a host running its browser at a lower tick rate). Animations that
-  looked like they were "not really running at 50 fps" — dragging or stuttering
-  — now play at the correct wall-clock speed by skipping intermediate frames
-  instead of slowing down, while stop poses and the outro are never skipped.
-- **NEXT reacts instantly, even mid-animation.** Pressing `CG NEXT` (vMix
-  Continue / OBS continue) while a sequence is still animating now jumps to the
-  upcoming stop and keeps playing straight toward the next one — no more
-  double-press and no waiting for the pose to settle first. On the last stop it
-  triggers the outro, exactly as before.
-- **On-screen playback diagnostics.** Add `?diag` to a template's URL, or send
-  `CG INVOKE diag`, to show a small HUD with the real refresh rate, painted
-  frames per second, timeline speed and current frame — a quick way to confirm
-  a playout host is actually feeding the template at full frame rate.
-- **Masks stay exactly where you put them.** Masks are now anchored in
-  composition space and move only through their own keyframes. Moving,
-  scaling, or retyping the layer under a mask — including dynamic text that
-  grows or shrinks and right-pinned names — no longer drags the mask off
-  position. The editor preview and the CasparCG export match by construction,
-  in nested compositions too. Existing projects are converted automatically on
-  first open.
-- **Import WebP images.** `.webp` files can now be imported into the Project
-  panel and used like any other still or sequence, including transparency.
-- **Editor fixes.** Font Size edits made on layers with keyframes no longer
-  revert when you move the playhead; stray "ghost" keyframe diamonds no longer
-  linger while dragging; and the timeline no longer jumps back to frame 0 when
-  you click another layer while zoomed in.
+- **OGraf graphics now play their out-animation.** The OGraf wrapper reported
+  a graphic as finished the moment its out-animation started, and renderers
+  took that as permission to remove it — so the graphic vanished on Stop
+  instead of animating off, whether or not it was sitting at a holding point.
+  The renderer is now told only once the outro has really finished, with a
+  safety timeout so it can never be left waiting. Disposing a graphic also
+  stops every loop it started — timeline, crawl, roll and the idle keep-alive —
+  instead of leaving them running inside the renderer.
+- **Bold and italic now export as the real font.** Only one font file per
+  family was ever embedded, so a layer set to Bold shipped with the regular
+  file — and because exported templates never fake a weight, it came out plain
+  regular. For families whose Light cut is also registered as the regular one
+  (Segoe UI, Calibri), even ordinary text could be exported in Light. Every
+  family, weight and italic combination a project uses is now embedded as its
+  own font file, matched to the one the editor preview draws with. The second
+  font of a **Two-Part Text** layer, which was never collected at all, is
+  included too, and names that already denote a cut ("Segoe UI Semibold") no
+  longer fall out of the export. Importing an HTML file keeps every cut of a
+  family — the extra ones arrive as their own project fonts while the regular
+  one keeps the plain family name, so existing layers are unaffected — and each
+  imported text layer lands on the cut it was written in, so a bold title comes
+  back bold instead of resolving to the family's regular file. Applies to the
+  CasparCG HTML export and to OGraf packages alike.
+- **Drive an element straight to a level from the playout host.** In templates
+  where each element climbs through several stop markers — a bar stacking
+  segment by segment, a lane rising wave by wave — the `level` and `levels`
+  keys of `CG UPDATE` now put an element exactly where you want it instead of
+  stepping it there with `CG NEXT`. The level is absolute: 0 is the base pose,
+  each higher number is one more completed move, a negative value hides the
+  element, and re-sending the value it already has does nothing — so a live
+  scoreboard can simply keep resending its current state. A lower level walks
+  the same baked animation backwards. Elements move in parallel, each at its
+  own pace, so raising three at once takes as long as the slowest one rather
+  than all three in a row, and a command arriving mid-move starts its element
+  right away. `showBar` / `hideBar` spotlight swaps stay sequential, as before.
+- **Play a single segment on demand.** Templates built as a series of separate
+  moves — six transitions separated by stop markers, say — could only be driven
+  in order, so reaching the third move meant playing the first two. A `seg`
+  field sent with `CG UPDATE` now plays exactly one of them, in any order:
+  `seg` 1 is the stretch between the first and second stop marker, `seg` 2 the
+  one after it, and the opening move stays plain `CG PLAY`. The graphic snaps
+  to that segment's starting pose and animates through to its stop marker with
+  nothing replayed on the way there. `seg` rides the same `CG UPDATE` path as
+  `show` and `level`, so it also works on hosts that accept `CG INVOKE` but
+  never actually run it.
+- **Per-element control now works when moves run back to back.** The export
+  used to work out which layers belong to which element from timing alone, by
+  looking for gaps between their animations. Where every move starts exactly
+  where the previous one ended there are no gaps, so the layers collapsed into
+  one or two useless groups and `showBar`, `hideBar` and the level commands had
+  nothing to address. When layer names describe more elements than the timing
+  does, the names now win: a trailing number is the element number (`Bar3`,
+  `Lane 7`), and the `Talas` wave form keeps an element's successive steps
+  apart, with the last two digits reading as the step. Name prefixes may
+  contain spaces, underscores and hyphens. Templates whose elements do enter at
+  separate times keep exactly the grouping they had before.
+- **Text and shape sizes no longer drift to the playhead.** While a layer has
+  **Font Size** or shape-size keyframes, the editor rewrites that layer's size
+  on every frame in order to draw it — and saving recorded that momentary value
+  as the layer's real size. A title authored at 170 could quietly come back at
+  120 simply because the playhead happened to sit on a smaller keyframe when
+  the project was saved, when you switched composition, or when the layer was
+  precomposed; copying a layer baked in the size from the frame you copied on.
+  The authored size is now kept apart from the animated per-frame one, so
+  saving, precomposing and copy/paste keep the size you actually set. Exports
+  still bake the animation itself, exactly as before.
+- **Layers keep their proportions by default.** A chain toggle now sits beside
+  **Scale** in the layer's transform controls, and the **Constrain
+  proportions** checkbox in **Shape / Image Size (px)** is no longer hidden on
+  everything except ellipses. Both are on by default: dragging a corner handle
+  scales evenly without holding a key, and typing one dimension pulls the other
+  along. Hold **Shift** while dragging to scale a layer freely for that one
+  drag. Note the change of behaviour — shape and image size handles now keep
+  the ratio unless you clear the checkbox, where they used to move one axis
+  only; there **Shift** can only add the constraint, so untick the box when you
+  want a single axis. The choice is per layer and lasts for the session. Mask
+  handles are deliberately left out of both and stay single-axis, with
+  **Shift** as the manual override.
+- **The mask anchor point sits where the numbers say.** The yellow crosshair
+  for a mask is now drawn — and dragged — through exactly the transform the
+  mask itself is drawn with. On a scaled shape layer it used to sit up and to
+  the right of the mask, so the pivot you saw and the values in **Anchor
+  Point** disagreed with where the mask really was. Typing or scrubbing an
+  anchor value now gets the same Pan Behind correction as dragging the
+  crosshair, instead of making the mask jump. A new mask on a scaled shape
+  layer also starts out matching the layer instead of stopping short of its
+  edges. Masks in saved projects open exactly where they were.
+- **Snapping and the on-canvas frame tell the truth on transformed layers.**
+  The layer you drag is now measured by its real on-screen footprint, like
+  everything it snaps to — canvas edges and centre, manual guides, the grids
+  and other layers — so rotated and skewed layers land on the guide they light
+  up instead of coming to rest beside it. The selection frame, handles, anchor
+  marker and mask outlines also follow **Zoom**, **Scale X/Y** and **3D Flip**
+  transitions: parking the playhead inside one of those used to show the layer
+  growing, shrinking or flipping while the overlay stayed frozen at its resting
+  size.
+- **Copy and paste carries the whole layer.** A layer with more than one mask
+  pasted with exactly one, silently dropping the rest — and every mask's name
+  and its Add / Subtract mode went missing even when there was only one. A text
+  layer attached through **Child Of (text)** pasted still pointing at the
+  parent in the original composition, and **Dynamic Anchor (X)** tags, **Size
+  Binding**, an unlinked Scale W/H and a shape collapsed to zero were all left
+  behind. All of that now travels with the layer, and a child text layer whose
+  parent is missing from the composition you are working in draws itself
+  instead of staying invisible.
 - **More under-the-hood fixes** across the editor, preview, and export paths.
 }
