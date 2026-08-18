@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.5.9.1 — 2026-08-18
+
+- **A layer named "0" can now be controlled from the playout host.** Element
+  numbers are read from layer names, and zero was mistaken for "this layer has
+  no number at all". Such a layer was left out of its element's group and
+  turned into a separate opening group of its own — one with no number, which
+  meant no `show`, `showBar` or `level` command could ever address it, and the
+  layer stayed on screen when the rest of its element went down. Zero is now
+  treated as the valid number it is, so a layer named "0" joins element 0 like
+  any other.
+
 ## v1.5.9 — 2026-07-31
 
 - **OGraf graphics now play their out-animation.** The OGraf wrapper reported
@@ -25,6 +36,23 @@
   imported text layer lands on the cut it was written in, so a bold title comes
   back bold instead of resolving to the family's regular file. Applies to the
   CasparCG HTML export and to OGraf packages alike.
+- **Two-part and child text no longer sit high in their layer box.** Every text
+  layer's box starts at the top of a fixed reference glyph, so the same font and
+  size always give the same box — but the two-run builder measured from the
+  typographic line instead. A **Two-Part Text** layer, and a parent while a
+  **Child Of (text)** layer was attached to it, therefore drew its words that
+  much higher than the identical text drawn as a plain layer, and dropped into
+  place at the child's release frame when the plain builder took over. On a
+  116 px face that was a visible ten-pixel lift for the whole attached pair.
+  Both runs now use the same reference box as every other text layer, which also
+  puts the editor preview back on the same origin the exported HTML was already
+  compensating for. The same was true sideways: the box began at the pen position
+  rather than at the first glyph, so these layers also drew a fraction to the
+  right of where the exported template put them. Both axes now start on the ink.
+  Note that existing Two-Part Text layers move down by the vertical gap — roughly
+  a tenth of the font size — and a little to the left, and may want their
+  position nudged; exported templates do not move, since that is where they were
+  drawing all along.
 - **Drive an element straight to a level from the playout host.** In templates
   where each element climbs through several stop markers — a bar stacking
   segment by segment, a lane rising wave by wave — the `level` and `levels`
