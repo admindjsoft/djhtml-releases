@@ -1,5 +1,88 @@
 # Changelog
 
+## v1.6.0 — 2026-08-30
+
+- **Play, Next and Stop in the editor preview.** Checking how a template behaves
+  at its stop markers meant exporting it and opening the HTML preview window.
+  Three transport buttons now sit beside the marker button, above the frame
+  counter: **Play** runs from the start of the work area and holds at the first
+  stop marker, **Next** jumps straight to the following marker and carries on
+  from there, and **Stop** jumps to the last marker and plays the outro. The
+  jumps are immediate, so there is no waiting for the animation to reach a pose
+  before moving on. Ordinary playback is unchanged — it still runs straight
+  through the markers as before.
+- **Font weight is now chosen from a list, and can be animated.** The inspector
+  used to offer only a Bold switch, so a family's Light, Medium, SemiBold or
+  Black cuts were out of reach even though the project file, the editor preview
+  and the HTML export all understood them. Text layers now carry a **Weight**
+  dropdown that lists only the cuts the chosen family really has, for both fonts
+  of a **Two-Part Text** layer. Bold stays as a shortcut and now picks the
+  nearest heavier cut the family actually offers. Changing family or italic no
+  longer silently resets the chosen cut — it is carried over to the closest cut
+  the new family has, which matters for italics because many families ship fewer
+  italic cuts than upright ones.
+- **Weight is a keyframed property.** Text layers get a **Weight** row in the
+  layer panel with the usual keyframe diamond, so a caption can grow from Light
+  to Black over time. Between keyframes the weight is interpolated as a number
+  and then snapped to a cut the family really has, so the editor preview and the
+  exported HTML always land on the same font file — a family with six cuts gives
+  a stepped ramp, one with only regular and bold gives a single switch halfway.
+  Every cut the animation passes through is embedded in the exported HTML. Hold
+  interpolation is available on the row as usual if a hard switch is wanted.
+- **The second font of a Two-Part Text layer has its own animated weight.** It
+  used to be selectable but frozen, because the second run followed the first by
+  a size ratio and a weight cannot be scaled that way. It now has its own
+  **Weight 2** row in the layer panel, with its own keyframe diamond, so the two
+  runs of one line can move between cuts independently — a name that thickens
+  while the surname stays Light, for instance. The row is present on every text
+  layer and comes to life once Two-Part Text is switched on, so turning the
+  feature on or off never shifts the keyframe markers of the rows below it.
+  An attached child text layer is unaffected: it still follows its parent's
+  animated weight, as it does for size.
+- **Imported fonts now offer their cuts in the Weight list.** Importing an HTML
+  template brings in every cut it uses as its own project font — "Changa",
+  "Changa Light", "Changa Medium" — and the Weight list saw those as three
+  unrelated families, so it showed a single locked cut for each. Cuts of the
+  same family are now recognised as belonging together and offered as a list;
+  picking one moves the layer to that cut. A family that only came in with one
+  cut is untouched, a name that already spells out its own cut is never
+  re-labelled, and system fonts behave exactly as before. Because an imported
+  font renders the cut stored inside its file, the Weight row for such a layer
+  offers the choice but not the keyframe diamond.
+- **Roll layers can animate their weight.** The rolling credits baked the font
+  into the rolled lines, so the Weight keyframe button was switched off for
+  them; the lines now take the weight from the layer itself and the row behaves
+  like any other text layer. The rolled content is no longer rebuilt when the
+  weight changes, so a roll never jumps back to its start mid-animation.
+- **The font size of a Roll layer can no longer be keyframed.** The diamond was
+  offered but the animation never reached the exported template: a roll measures
+  the height of one pass once, when it is set up, and uses that to know where the
+  loop seam is — so a size that grows mid-roll would leave that measurement stale
+  and the seam would visibly jump. The size is baked into the rolled lines for that
+  reason, and the row now says so instead of quietly doing nothing. Weight is not
+  affected and animates normally, because it only changes glyph widths.
+- Known limits of this first version: the **Lottie** export carries the static
+  cut only.
+- **Lottie: weights other than Light, SemiBold and Bold no longer come out
+  regular.** The exporter recognised three cuts by name and silently mapped
+  everything else — Thin, ExtraLight, Medium, ExtraBold, Black — to regular. It
+  now reads the real weight. Two cuts of the same family also used to be written
+  under the same font name, so a Two-Part Text layer using both had one of them
+  rendered in the other's cut; each cut is now named separately.
+- **Roll layers keep their weight.** The roll line builder recognised nine
+  weight names and turned everything else — including the common aliases
+  UltraBold, DemiBold and Heavy — into regular.
+- **Text no longer exports the cut from whatever frame you were parked on.**
+  The second font of a Two-Part Text layer, the rolled lines of a Roll layer,
+  the single-frame HTML export, the Lottie export and the Bold switch of the
+  second font all read the live per-frame weight instead of the authored one,
+  so exporting while scrubbed into the middle of an animation could ship the
+  wrong cut.
+- **Saving no longer records the size or weight from whatever frame you were
+  parked on.** Projects saved through the .htmc writer stored the live per-frame
+  values instead of the authored ones, so scrubbing across a font-size animation
+  and then saving could bake that frame's size into the project.
+
 ## v1.5.9.1 — 2026-08-18
 
 - **A layer named "0" can now be controlled from the playout host.** Element
