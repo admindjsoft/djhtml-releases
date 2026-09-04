@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.6.1 — 2026-09-04
+
+- **Layers with more than one mask are visible again in the exported template.**
+  A layer carrying two or more masks, or a single feathered mask, could come out
+  of the export invisible while the editor preview showed it correctly. The masks
+  themselves were exported intact — they were simply drawn in the wrong place. A
+  mask stays where you authored it in the composition, and the export applies it
+  through a wrapper that does not move with its layer; the outline-shaped masks
+  already accounted for that, but the two kinds that are drawn as an image —
+  multiple masks combined together, and a feathered edge — were still positioned
+  as though they rode along with the layer. On a lower third sitting near the
+  bottom of frame that pushed the mask right off the top of the screen, so the
+  layer was masked away entirely. Both now land where they were drawn.
+
 ## v1.6.0 — 2026-08-30
 
 - **Play, Next and Stop in the editor preview.** Checking how a template behaves
