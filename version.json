@@ -11,8 +11,8 @@
   application. Every single-frame image in a nested composition now leaves the
   export as its own layer, addressable by its name exactly like a text layer:
   `"1"` shows it, an empty value hides it, and a path or URL replaces the picture.
-  Image sequences, video, atlas, crawl and roll layers are unchanged and are still
-  rendered into the strip, because their frame timing lives in that strip.
+  Image sequences and video clips are unchanged and are still rendered into the
+  strip, because their frame timing lives in that strip.
 - **Templates that animate an image inside a nested composition get much
   smaller.** The rendered strip had to store a separate picture for every pose the
   image passed through — a sub-pixel move counted as a new pose — while the layer
