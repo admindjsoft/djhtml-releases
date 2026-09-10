@@ -1,5 +1,43 @@
 # Changelog
 
+## v1.6.2 — 2026-09-10
+
+- **Still images inside a nested composition now export as layers of their own.**
+  A nested composition was rendered into a single strip of images for the export,
+  so anything in it that was not text, an image loader or a shape lost its
+  identity on the way out — a plain PNG had no name the playout could address, so
+  a row of icons could not be shown or hidden one by one from a control
+  application. Every single-frame image in a nested composition now leaves the
+  export as its own layer, addressable by its name exactly like a text layer:
+  `"1"` shows it, an empty value hides it, and a path or URL replaces the picture.
+  Image sequences and video clips are unchanged and are still rendered into the
+  strip, because their frame timing lives in that strip.
+- **Templates that animate an image inside a nested composition get much
+  smaller.** The rendered strip had to store a separate picture for every pose the
+  image passed through — a sub-pixel move counted as a new pose — while the layer
+  version stores the source file once and moves it with a transform. In one of the
+  LED-wall swimming templates two thirds of a 5 MB export was exactly that: three
+  images, stored hundreds of times over. Where the images do not move the size is
+  unchanged; a 48-icon football template grew by 3 KB on 1.4 MB, and its icons now
+  answer to their names.
+- Existing projects are unaffected in every other respect: templates whose nested
+  compositions hold only text and shapes export byte for byte as before, group
+  windows and stop markers of the independent-group templates are unchanged, and
+  a still image keeps being rendered into the strip in the three cases where
+  leaving it there is what keeps it correct — when it is the alpha matte of a
+  layer that stays in the strip, when it shares a track with a clip that does not
+  leave, and when it carries more than one mask.
+- **A value typed into a box now belongs to the composition it was typed in.**
+  Renaming a layer and then clicking another composition's tab, without pressing
+  Enter first, put the new name on whatever layer happened to sit at the same
+  position in the composition that opened. The same ordering affected every field
+  that commits when it loses focus: values typed into the inspector or into the
+  layer panel, and text typed straight onto the stage, were either applied to the
+  newly opened composition — keyframe and undo entry included — or quietly
+  dropped. Switching composition now closes any edit in progress first, so the
+  value lands where it was typed, and every one of those fields additionally
+  refuses a late write that arrives after the composition has already changed.
+
 ## v1.6.1 — 2026-09-04
 
 - **Layers with more than one mask are visible again in the exported template.**
