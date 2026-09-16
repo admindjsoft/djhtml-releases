@@ -1,5 +1,73 @@
 # Changelog
 
+## v1.6.3 — 2026-09-16
+
+- **File > Dependencies > Collect Files packs a project for another machine.**
+  Moving a project meant hunting down every image sequence, video and font it
+  used and relinking them by hand on the other side. Collect Files asks where to
+  create the package and writes the project there together with a copy of every
+  file it uses — footage under `(Footage)`, one subfolder per source folder so a
+  sequence stays together under its original frame names, and imported fonts
+  under `(Fonts)`, each in a folder of its own. Paths inside the copied project
+  are relative, so the folder opens from any drive. The project you have open is
+  left exactly as it was and keeps pointing at its original files. Imported items
+  that are not on the timeline are collected too, because the project still lists
+  them. System fonts are not copied — the report names them as fonts that must be
+  installed on the target machine — and files that are already missing are
+  skipped and listed.
+- **Atlas and video layers can now live next to the project file.** Their paths
+  used to be stored and read back only as absolute paths, so a project moved
+  together with its footage found its image sequences on its own but not its
+  atlases and videos. They are now
+  stored relative to the project whenever the file sits inside the project
+  folder, exactly like image sequences already were; projects that point at
+  footage elsewhere are unaffected.
+- **Consolidate All Footage, Remove Unused Footage and Reduce Project.** The rest
+  of the Dependencies menu tidies the Project panel. **Consolidate** merges items
+  that were imported more than once from the same source into one, moving every
+  layer that used a duplicate over to it; items that share a file but were
+  interpreted differently — another frame rate or frame size — are left apart.
+  **Remove Unused Footage** deletes images, sequences, atlases and videos that no
+  composition uses. Fonts are deliberately not removed: a keyframed font weight
+  passes through cuts the layer's font name does not show, so a cut that looks
+  unused may be the one an animation lands on; solids are kept as well.
+  **Reduce Project** keeps the compositions selected in the Project panel,
+  together with every composition nested inside them, and removes everything
+  else. Each command first lists exactly what it will remove, never touches the
+  files on disk, and is undone with a single Ctrl+Z.
+- **Find Missing Footage, Find Missing Fonts and Find Missing Effects.** Checks
+  that used to run only while a project was opening can now be run at any time
+  and change nothing. Missing Footage looks at every frame of a sequence rather
+  than only the first, Missing Fonts reports fonts used by text layers that are
+  neither installed nor available as an imported font file, and Missing Effects lists
+  effects written by a newer version of DJ HTML Creator.
+- **A project with an effect from a newer version can be worked with.** An effect
+  type this version does not know raised an error as soon as the application
+  needed its definition. Such an effect is now left inert: it is not drawn, but
+  it stays in the project untouched and is written back when you save, so the
+  newer version still finds it.
+- **Replace Footage keeps a trimmed layer's length.** Replacing an image sequence
+  or a video in the Project panel set every layer that used it back to the full
+  length of the new footage, discarding the trim, and a replaced sequence also
+  lost its Freeze Tail setting. A trimmed layer now keeps its length and in point,
+  shortened only if the new footage is too short to fill them, and a layer with
+  Freeze Tail keeps its length regardless. A layer that showed the whole of the
+  old footage still follows the new one, so swapping a placeholder render for the
+  final one extends the layer as before. Video layers also take the frame-rate
+  conform into account again when their length is recalculated.
+- **Next in the editor preview plays from a marker.** With the playhead holding at
+  a stop marker, Next jumped straight to the following marker, so the animation
+  between the two was never seen. It now plays from the current marker to the
+  next one, the way the exported template does. Pressing Next while an animation
+  is still running keeps skipping ahead to the upcoming marker, as before.
+- **A solid's colour in the Project panel is saved.** The colour was not part of
+  the project file or the undo history, so a solid item came back in a default
+  colour after the project was reopened or an edit was undone.
+- **Undo no longer switches off frame-rate conform.** The source frame rate of
+  imported footage was left out of the undo history, so after any undo, footage
+  recorded at a different frame rate was no longer conformed when dragged onto
+  the timeline. Layers already placed were not affected.
+
 ## v1.6.2 — 2026-09-10
 
 - **Still images inside a nested composition now export as layers of their own.**
