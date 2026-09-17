@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.6.4 — 2026-09-17
+
+- **Follow keeps its distance when the source is a Two-Part Text layer.** A
+  text layer tagged with **Dynamic Anchor (X) → Follow** did not move when the
+  layer it followed was a Two-Part Text layer, as soon as the data reached the
+  template before that layer was first drawn — the usual case on air, where the
+  name enters after an intro and the data arrives together with the add command.
+  Follow measures how much wider or narrower the typed text is than the text the
+  layout was designed with, and for a Two-Part layer that design width was either
+  taken from the already-updated name, so the difference was always zero, or not
+  recorded at all when the whole name arrived under a single key. The design
+  width is now measured from the authored texts of both parts, so the follower
+  stays exactly as far from the end of the name as it was designed, for any name
+  length, whether the two parts arrive under their own keys or as one, and
+  including Fit Width compression of long names. Three-element straps such as
+  "Michael JOHN SMITH" now work as a Two-Part Text layer followed by a
+  third-element layer of its own style and key. Child Of (text) pairs are
+  unaffected.
+- **Turning on Two-Part Text detaches a Child Of (text) pair.** A Two-Part layer
+  cannot take part in a child pair — while attached, the child is drawn as its
+  parent's second part, a slot a Two-Part layer already uses for its own text.
+  Switching Two-Part on for a parent that had an attached child made the child
+  disappear from the preview and silently left it out of the exported template,
+  and switching it on for a child lost that child's own second part. The pair is
+  now detached automatically, with a warning that lists the layers involved.
+  The Two-Part switch is also a single undo step now — it was not undoable at
+  all before — so one Ctrl+Z restores both the setting and the pair. Pasting a
+  copied child after its parent has been switched to Two-Part detaches it the
+  same way instead of pasting an invisible layer.
+
 ## v1.6.3 — 2026-09-16
 
 - **File > Dependencies > Collect Files packs a project for another machine.**
