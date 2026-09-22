@@ -1,5 +1,41 @@
 # Changelog
 
+## v1.7.0 — 2026-09-22
+
+- **Template Script: your own JavaScript inside the exported template.**
+  **Composition > Template Script…** opens a code editor (syntax colouring, line
+  numbers, Ctrl+F, ready-made examples, an API reference panel) for JavaScript
+  that is embedded in every HTML export of that composition — CasparCG, OBS,
+  vMix, SPX, OGraf and HTML Preview. The script talks to the template through
+  the `dj` object. `dj.onUpdate` sees every UPDATE before the template
+  interprets it and can rename, split or drop keys, so one incoming value such
+  as "Jane Doe - City FC" can feed a Two-Part name layer and a third-element
+  layer, with Two-Part, Follow and Fit Width behaving exactly as if the parts
+  had arrived under their own keys. `dj.onPlay`, `dj.onNext` and `dj.onStop`
+  run before the corresponding command and can cancel it; `dj.onLoad` runs
+  once when the template is ready; `dj.invoke` exposes functions for CG INVOKE;
+  `dj.update`, `dj.play` / `dj.next` / `dj.stop`, `dj.show` / `dj.hide`,
+  `dj.get` / `dj.data`, `dj.status`, `dj.every` / `dj.after` / `dj.clear` and
+  `dj.log` do the work. **Check Syntax** reports the line and column of an
+  error, and an export is refused while the script has one; a runtime error
+  inside the template disables only the script — the graphic keeps working and
+  the error appears in the HTML Preview status bar. Script timers are cleared
+  on every PLAY and when the graphic goes off air. The script is saved in the
+  project, follows Duplicate Composition and Collect Files, is restored by
+  Import HTML and is a single undo step. The WPF preview does not run scripts;
+  Lottie export warns and exports without the script.
+- **HTML Preview: Test Data editor.** A **Test Data…** button in the toolbar
+  opens an editor window for the UPDATE payload — JSON or CasparCG XML, with
+  syntax colouring, validation, Format JSON, Load/Save and **Example
+  payloads…** built from the layers of the composition (all text layers, line
+  breaks, show/hide, loaders, `_x`/`_y`, `show`/`showBar`/`levels`/`seg`/
+  `allDown`, CasparCG XML). **Send Update**
+  (Ctrl+Enter) passes the text to update() exactly as a playout server would,
+  so a script can be tried without a server. The value is remembered per
+  composition; script errors and `dj.log` output show in the preview's status
+  bar.
+- HTML Preview messages now use the dark dialog style.
+
 ## v1.6.4 — 2026-09-17
 
 - **Follow keeps its distance when the source is a Two-Part Text layer.** A
