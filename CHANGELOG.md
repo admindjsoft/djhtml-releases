@@ -1,5 +1,33 @@
 # Changelog
 
+## v1.7.1 — unreleased
+
+- **DJ HTML Creator is now completely free.** Every feature is available to
+  everyone with no trial, no time limit and no license key, and exports (HTML
+  for CasparCG, OBS, vMix, SPX and OGraf, Lottie, video and image sequences) no
+  longer carry the "DJ HTML Creator — Trial" watermark. The License window and
+  **Help > License…** are gone, and the app no longer contacts the license
+  server when it starts or closes. Projects and settings are kept as they are.
+  Paid subscriptions are not renewed: they stay active until the end of the
+  period already paid for, and nothing more is charged. Thank you to everyone
+  who supported the project with a subscription.
+- **Animated position and opacity through UPDATE.** Every layer now also accepts
+  `Name_opacity` (0–100 % of its designed opacity) and `Name_duration`
+  (milliseconds) next to the existing `Name_x` / `Name_y`. With a duration, the
+  layer animates from where it is on screen to the new position or opacity
+  instead of jumping; an update arriving mid-move continues smoothly from the
+  current point. `Name_ease` picks the curve (`easeInOut` by default, `easeIn`,
+  `easeOut`, `linear`). For a nested composition the keys move and fade the whole
+  group. Without a duration everything behaves as before. Example:
+  `{"Logo_x":640,"Logo_y":900,"Logo_opacity":40,"Logo_duration":500}`.
+  Test Data's **Example payloads…** has ready-made entries for it.
+- `Name_x` / `Name_y` now also move looping layers while the graphic holds at a
+  stop marker; before, those layers stayed at their designed position.
+- **Text bounding box follows pasted or deleted keyframes.** Pasting a Position
+  keyframe at the playhead (or deleting, cutting, dragging one, changing its
+  value or easing) moved the text, but its selection box and the Position values
+  in the layer controls stayed at the old place until the playhead was moved.
+
 ## v1.7.0 — 2026-09-22
 
 - **Template Script: your own JavaScript inside the exported template.**
