@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.7.1 — unreleased
+## v1.7.1
 
 - **DJ HTML Creator is now completely free.** Every feature is available to
   everyone with no trial, no time limit and no license key, and exports (HTML
